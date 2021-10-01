@@ -1,6 +1,3 @@
 # C++ Programs
 
-**All the C++ Programs go in this directory!** 
-
-
-
+**All the C++ Programs go in this directory!**

@@ -1,41 +1,48 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, inital-scale=1">
-	<title>CreateRoom:~</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style/normalize.css" media="all">
-  <link rel="stylesheet" href="/style/createRoom.css" media="all">
-</head>
-<body>
-	<!-- start container -->
-	<div class="container">
-    <h2>
-      <span class="fun-retype">void</span> 
-      create_room(<span class="fun-arg">roomName</span>);
-    </h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, inital-scale=1" />
+    <title>CreateRoom:~</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/normalize.css" media="all" />
+    <link rel="stylesheet" href="/style/createRoom.css" media="all" />
+  </head>
+  <body>
+    <!-- start container -->
+    <div class="container">
+      <h2>
+        <span class="fun-retype">void</span>
+        create_room(<span class="fun-arg">roomName</span>);
+      </h2>
 
-		<!-- start create room form  -->
-		<form id="create-room-form" class="room-create-form" method="POST" action="/room">
-			<input 
-				id="room-name" 
-        class="room-input-box"
-				type="text" 
-				name="roomName" 
-				placeholder="room name" 
-				autocomplete="off"
-			/>
-			<button type="submit">
-				create room
-			</button>
-		</form>
-		<!-- end create room form  -->
+      <!-- start create room form  -->
+      <form
+        id="create-room-form"
+        class="room-create-form"
+        method="POST"
+        action="/room"
+      >
+        <input
+          id="room-name"
+          class="room-input-box"
+          type="text"
+          name="roomName"
+          placeholder="room name"
+          autocomplete="off"
+        />
+        <button type="submit">
+          create room
+        </button>
+      </form>
+      <!-- end create room form  -->
 
-	</div>
-	<!-- end container -->
+    </div>
+    <!-- end container -->
 
-	<script src="/script/room/createRoom.js"></script>
-</body>
+    <script src="/script/room/createRoom.js"></script>
+  </body>
 </html>

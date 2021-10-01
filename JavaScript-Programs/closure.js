@@ -1,12 +1,12 @@
-function one(){
-    let x = "This variable is still available once the function is returned";
+const one = () => {
+  let x = "This variable is still available once the function is returned";
 
-    function two(){
-        console.log(x);
-    }
+  function two() {
+    console.log(x);
+  }
 
-   return two
-}
+  return two;
+};
 
 let r = one();
 

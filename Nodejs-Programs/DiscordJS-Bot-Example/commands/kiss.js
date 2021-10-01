@@ -1,6 +1,6 @@
-const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
-const fetch = require("node-fetch")
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const { MessageEmbed } = require("discord.js");
+const fetch = require("node-fetch");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -11,20 +11,22 @@ module.exports = {
     ),
 
   async execute(interaction) {
-    const user = interaction.options.getUser("user")
+    const user = interaction.options.getUser("user");
     if (user === interaction.user || user.bot) {
-      await interaction.reply(`You cannot kiss ${user.bot ? "a bot" : "yourself."}!`)
-      return
+      await interaction.reply(
+        `You cannot kiss ${user.bot ? "a bot" : "yourself."}!`
+      );
+      return;
     }
     const { image } = await fetch("http://api.nekos.fun:8080/api/kiss").then(
       (res) => res.json()
-    )
+    );
     const kissEmbed = new MessageEmbed()
       .setAuthor(`${interaction.user.tag} kissed ${user.tag}.`)
       .setImage(image)
       .setTimestamp()
-      .setColor("GREEN")
+      .setColor("GREEN");
 
-    await interaction.reply({ embeds: [kissEmbed] })
+    await interaction.reply({ embeds: [kissEmbed] });
   },
-}
+};

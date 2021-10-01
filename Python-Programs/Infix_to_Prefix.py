@@ -1,5 +1,4 @@
 class Coversion_Infi_Prefi:
-
     def __init__(self, size):
         self.top = -1
         self.size = size
@@ -42,18 +41,18 @@ class Coversion_Infi_Prefi:
             elif i == "(":
                 self.Push(i)
             elif i == ")":
-                while (not self.Is_Empty() and self.Peek() != "("):
+                while not self.Is_Empty() and self.Peek() != "(":
                     ele = self.Pop()
                     self.Result.append(ele)
-                if (not self.Is_Empty() and self.Peek() != "("):
+                if not self.Is_Empty() and self.Peek() != "(":
                     return -1
                 else:
                     self.Pop()
             else:
-                while(not self.Is_Empty() and self.Is_Greater(i)):
+                while not self.Is_Empty() and self.Is_Greater(i):
                     self.Result.append(self.Pop())
                 self.Push(i)
-        while (not self.Is_Empty()):
+        while not self.Is_Empty():
             self.Result.append(self.Pop())
         print("".join(self.Result))
 

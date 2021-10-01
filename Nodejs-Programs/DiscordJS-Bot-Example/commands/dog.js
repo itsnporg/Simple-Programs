@@ -1,6 +1,6 @@
-const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
-const fetch = require("node-fetch")
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const { MessageEmbed } = require("discord.js");
+const fetch = require("node-fetch");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -10,15 +10,15 @@ module.exports = {
   async execute(interaction) {
     const { image, fact } = await fetch(
       "https://some-random-api.ml/animal/dog"
-    ).then((res) => res.json())
+    ).then((res) => res.json());
     const dogEmbed = new MessageEmbed()
       .setDescription(`**Fact**\n\`\`\`${fact}\`\`\``)
       .setAuthor(`Here's a dog for you!`)
       .setImage(image)
       .setColor("GREEN")
       .setTimestamp()
-      .setFooter(`Requested by ${interaction.user.tag}`)
+      .setFooter(`Requested by ${interaction.user.tag}`);
 
-    interaction.reply({ embeds: [dogEmbed], ephemeral: true })
+    interaction.reply({ embeds: [dogEmbed], ephemeral: true });
   },
-}
+};

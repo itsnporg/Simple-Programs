@@ -6,19 +6,20 @@ import time
 import sys
 
 done = False
-#here is the animation
+# here is the animation
 def animate():
-    for c in itertools.cycle(['|', '/', '-', '\\']):
+    for c in itertools.cycle(["|", "/", "-", "\\"]):
         if done:
             break
-        sys.stdout.write('\rloading ' + c)
+        sys.stdout.write("\rloading " + c)
         sys.stdout.flush()
         time.sleep(0.1)
-    sys.stdout.write('\rDone!     ')
+    sys.stdout.write("\rDone!     ")
+
 
 t = threading.Thread(target=animate)
 t.start()
 
-#long process here
+# long process here
 time.sleep(10)
 done = True

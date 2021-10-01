@@ -14,12 +14,12 @@
 # Constraints
 # 1≤T≤5000
 # 0≤X,Y,Z≤1000
-# Sample Input 1 
+# Sample Input 1
 # 3
 # 4 10 8
-# 3 6 1 
-# 4 8 2 
-# Sample Output 1 
+# 3 6 1
+# 4 8 2
+# Sample Output 1
 # YES
 # NO
 # YES
@@ -33,9 +33,6 @@
 # Test Case 3: If RCB wins all their remaining games, they will have end up with 8 points. (4+2∗2=8), hence it is possible for them to qualify for the playoffs.
 
 
-
-
-
 t = int(input())
 
 for i in range(t):
@@ -46,8 +43,8 @@ for i in range(t):
     x = int(x)
     y = int(y)
     z = int(z)
-    
-    if ((x + 2*z) >= y):
+
+    if (x + 2 * z) >= y:
         print("YES")
     else:
         print("NO")

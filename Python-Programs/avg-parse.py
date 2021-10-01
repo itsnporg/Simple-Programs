@@ -1,12 +1,12 @@
 # Total, Average and Count Computation from numbers in a text file with a mix of words and numbers
 
-fname = input('Enter file name: ')
+fname = input("Enter file name: ")
 # Ensure your file is in the same folder as this script
 # Test file used here is mbox.txt
 fhandle = open(fname)
 
 # Seeking number after this word x
-x = 'X-DSPAM-Confidence:'
+x = "X-DSPAM-Confidence:"
 y = len(x)
 
 # This shows that the total number of characters is 19
@@ -35,6 +35,6 @@ for line in fhandle:
         # Loop, iterates through all numbers to count sum of numbers
         total += line_number
 
-print('Count of numbers', count)
-print('Sum of numbers', total)
-print('Average of numbers', total / count)
+print("Count of numbers", count)
+print("Sum of numbers", total)
+print("Average of numbers", total / count)

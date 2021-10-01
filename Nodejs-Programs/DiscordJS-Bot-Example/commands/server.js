@@ -1,5 +1,5 @@
-const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -63,7 +63,7 @@ module.exports = {
           value: `${interaction.guild.vanityURLCode ?? "None"}`,
           inline: true,
         }
-      )
-    await interaction.reply({ embeds: [serverEmbed], ephemeral: true })
+      );
+    await interaction.reply({ embeds: [serverEmbed], ephemeral: true });
   },
-}
+};
