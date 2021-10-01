@@ -1,25 +1,12 @@
-# Author      : Prajwal Chapagain <prajjwal2058@gmail.com>
-# Date        : Monday Aug 16, 2021 20:02:04 NPT
-# License     : MIT
-
 DEBUG=0
 
 STD=-std=c99
-WARN=-Wall -Wextra -Wpedantic \
-     -Wformat=2 -Wshadow \
-     -Wwrite-strings -Wstrict-prototypes -Wold-style-definition \
-     -Wredundant-decls -Wnested-externs -Wmissing-include-dirs
+WARN=-Wall -Wextra
 
 OPTIMIZE=-O2
 DEBUG_FLAGS=-g
 
-CC=clang
 CFLAGS=$(STD) -MMD
-
-# GCC warnings that Clang doesn't provide:
-ifeq ($(CC),gcc)
-    WARN += -Wjump-misses-init -Wlogical-op
-endif
 
 ifeq ($(DEBUG), 1)
 	CFLAGS += $(DEBUG_FLAGS) $(WARN) -DDEBUG
