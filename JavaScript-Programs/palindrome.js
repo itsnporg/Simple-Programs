@@ -1,34 +1,25 @@
 // js code to check if a number is palindrome or not along with a reverse function
 
-const x = prompt('Enter a positive integer')
+const number = prompt('Enter a positive integer')
 
 
 //defining a reverse function
-var reverse = function(y) {
-  if (y >= Math.pow(2, 31)-1 || y<= Math.pow(-2, 31)) return 0;
-  revsum = 0;
-  checkSign = Math.sign(y);
-  if (checkSign === -1) {
-    y = y*-1;
-  }
-  var myArr = String(y).split("").map((y)=>{
+const reverse = function(y) {
+  rev_num = 0;
+  let num_to_Array = String(y).split("").map((y)=>{
     return Number(y)
   })
-  for (var i = myArr.length - 1; i >= 0; i=i-1) {
-    const num = myArr[i]*Math.pow(10, i)
-    revsum = revsum + num
+  for (let i = num_to_Array.length - 1; i >= 0; i=i-1) {
+    const num = num_to_Array[i]*Math.pow(10, i)
+    rev_num = rev_num + num
   }
-  if (revsum >= Math.pow(2, 31)-1 || revsum<= Math.pow(-2, 31)) return 0;
-  return revsum*checkSign;
 };
 
-rev = reverse(x);
+rev = reverse(number);
 
 //checking if reverse equals given integer
-if (rev === x) {
-  console.log(`${x} is a palindrome number`);
+if (rev === number) {
+  console.log(`${number} is a palindrome number`);
 } else {
-  console.log(`${x} is not a palindrome number`);
+  console.log(`${number} is not a palindrome number`);
 }
-
-
