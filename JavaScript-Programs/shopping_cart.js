@@ -8,6 +8,7 @@ Requirements:
 3) Axios to make post request to the server by sending cart details to the server
 */
 
+// get DOM
 const cartBtn = document.querySelectorAll(".add-to-cart");
 const badge = document.getElementById("cart-badge");
 const mobileBadge = document.getElementById("cart-badge-mobile");
