@@ -1,5 +1,5 @@
 # Reverse Message
-Is a basic program to encrpt/decrypt the message
+Is a basic program to encrypt/decrypt the message
 
 # Building
 Run:
