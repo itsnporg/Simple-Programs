@@ -56,6 +56,6 @@ def toLower( text )
     end
 
     return result 
-end
+ end
 
 stringUpperAndLowerCase()
