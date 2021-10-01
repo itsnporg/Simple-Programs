@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <cs50.h>
+
 
 
 const int ASCII_DIFFERENCE = 32;
