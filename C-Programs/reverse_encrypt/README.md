@@ -1,6 +1,7 @@
-# Reverse the reverser
+# Reverse Message
+Is a basic program to encrpt/decrypt the message
 
-## Building
+# Building
 Run:
 ```bash
 sh build.sh
