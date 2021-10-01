@@ -1,9 +1,3 @@
-/*
- * Author      : Prajwal Chapagain <prajjwal2058@gmail.com>
- * Date        : Sunday Aug 15, 2021 17:06:08 NPT
- * License     : MIT
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -16,7 +10,6 @@
 
 void swap_letters(char *restrict msg, size_t msg_len)
 {
-    // end index to swap with first index
     size_t end_idx = msg_len - 1;
     for (size_t i = 0; i < end_idx; i++) {
         msg[i] ^= msg[end_idx];
