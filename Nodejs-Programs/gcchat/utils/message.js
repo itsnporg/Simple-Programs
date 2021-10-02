@@ -1,8 +1,8 @@
 function formatMessage(message, sender = "admin") {
-	return {
-		message,
-		sender
-	}
+  return {
+    message,
+    sender,
+  };
 }
 
 module.exports = formatMessage;

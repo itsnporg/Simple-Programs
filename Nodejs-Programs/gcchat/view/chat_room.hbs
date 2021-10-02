@@ -1,38 +1,37 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, inital-scale=1">
-	<title>Room Chat:~</title>
-	<script src="/socket.io/socket.io.js"></script>
-	<script src="/script/client.js"></script>
-	<script>
-		const roomName = "{{roomName}}";
-	</script>
-</head>
-<body>
-	<div class="container">
-		<h2>{{roomName}}</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, inital-scale=1" />
+    <title>Room Chat:~</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script/client.js"></script>
+    <script>
+      const roomName = "{{roomName}}";
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>{{roomName}}</h2>
 
-		<div id="message-inbox"></div>
+      <div id="message-inbox"></div>
 
-		<!-- start message input wrapper-->
-		<div id="message-input-wrapper">
-			<input 
-			id="message-box" 
-			type="text" 
-			placeholder="type your message" 
-			autocomplete="off"
-			/>
+      <!-- start message input wrapper-->
+      <div id="message-input-wrapper">
+        <input
+          id="message-box"
+          type="text"
+          placeholder="type your message"
+          autocomplete="off"
+        />
 
-			<button id="send-message-btn">
-				send
-			</button>
-		</div>
-		<!-- end message input wrapper -->
+        <button id="send-message-btn">
+          send
+        </button>
+      </div>
+      <!-- end message input wrapper -->
 
-	</div>
-	<!-- end container -->
-	<script src="/script/room/chatRoom.js"></script>
-</body>
+    </div>
+    <!-- end container -->
+    <script src="/script/room/chatRoom.js"></script>
+  </body>
 </html>

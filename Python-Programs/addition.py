@@ -1,14 +1,14 @@
 # Python program for addition of two numbers
 
 # function for addition
-def add(x,y):
-	return x+y
+def add(x, y):
+    return x + y
+
 
 # Main program
 
-a = int(input("Enter first number:"))
-b = int(input("Enter second number:"))
+first, second = [int(x) for x in input("Enter two value: ").split()]
 
-sum = add(a,b)
+sum = add(first, second)
 
 print(f"The sum is {sum}")

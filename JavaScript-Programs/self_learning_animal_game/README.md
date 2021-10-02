@@ -106,6 +106,7 @@ Run the following commands:
 `npm init`
 `npm install`
 `npm install readline-sync --save`
+
 <hr>
 If you want to test the program, first delete the tree.data_json file and I suggest you comment out these code in main.js file:
 
@@ -116,9 +117,10 @@ If you want to test the program, first delete the tree.data_json file and I sugg
 `const data = JSON.stringify(root);`
 `console.log("\n" + data);`
 `fs.writeFile("tree_data.json", data, (err) => {`
-  `if (err) throw err;`
+`if (err) throw err;`
 `console.log("\nJSON data is saved.");`
 `});`
+
 <hr>
 #####Note:
 If you want to save your input choices to a json file and use it next time when you run the program, store it in a JSON file first and then recall the JSON file.

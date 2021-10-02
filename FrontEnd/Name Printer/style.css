@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+* {
+  font-family: Ubuntu;
+  font-size: 40px;
+}
+
+.form-uname {
+  /* width: 200px; */
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
+.form-sub {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+input {
+  color: black;
+}
+input:valid {
+  color: green;
+}
+
+.result {
+  position: absolute;
+  top: 56%;
+  left: 30%;
+  color: green;
+}

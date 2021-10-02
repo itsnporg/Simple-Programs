@@ -1,12 +1,13 @@
 const availableRoomsContainer = document.querySelector("#available-rooms");
-const noRoomsMessageElement = availableRoomsContainer.querySelector(".no-rooms-info");
+const noRoomsMessageElement =
+  availableRoomsContainer.querySelector(".no-rooms-info");
 
-socket.on('room-created', (roomName) => {
+socket.on("room-created", (roomName) => {
   if (noRoomsMessageElement !== null) {
     removeNoRoomsMessage();
   }
   insertRoomDivElement(roomName);
-})
+});
 
 function removeNoRoomsMessage() {
   availableRoomsContainer.removeChild(noRoomsMessageElement);

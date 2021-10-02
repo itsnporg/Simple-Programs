@@ -1,17 +1,17 @@
-#Google Search
-#pip install Google
+# Google Search
+# pip install Google
 
 from googlesearch import search
 
 query = input("Enter your query:\n")
 
-for i in search(query, tld="co.in", num =5, stop =5, pause=2):
-	print(i)
-  
-  
-#EXplanation
+for i in search(query, tld="co.in", num=5, stop=5, pause=2):
+    print(i)
 
-#val: This is the text that you want to search for.
+
+# EXplanation
+
+# val: This is the text that you want to search for.
 
 # tld: This refers to the top level domain value like co.in or com which will specify which Google website we want to use.
 

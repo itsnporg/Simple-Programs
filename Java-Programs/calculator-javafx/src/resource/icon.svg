@@ -1,0 +1,24 @@
+<svg width="256" height="260" viewBox="0 0 256 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 1">
+<g id="Rectangle 11" filter="url(#filter0_d)">
+<path d="M63 19C63 15.134 66.134 12 70 12H184C187.866 12 191 15.134 191 19V233C191 236.866 187.866 240 184 240H70C66.134 240 63 236.866 63 233V19Z" fill="#22252D"/>
+</g>
+<rect id="Rectangle 13" x="82" y="35" width="86" height="41" rx="6" fill="#26A08E"/>
+<rect id="Rectangle 14" x="75" y="106" width="104" height="18" rx="6" fill="#292D36"/>
+<rect id="Rectangle 15" x="179.02" y="106.216" width="111.539" height="18" rx="6" transform="rotate(90.5625 179.02 106.216)" fill="#292D36"/>
+<rect id="Rectangle 16" x="97.8339" y="133.216" width="85.0594" height="18" rx="6" transform="rotate(90.5625 97.8339 133.216)" fill="#292D36"/>
+<rect id="Rectangle 17" x="124.834" y="133.216" width="85.0594" height="18" rx="6" transform="rotate(90.5625 124.834 133.216)" fill="#292D36"/>
+<rect id="Rectangle 18" x="151.834" y="133.216" width="85.0594" height="18" rx="6" transform="rotate(90.5625 151.834 133.216)" fill="#292D36"/>
+</g>
+<defs>
+<filter id="filter0_d" x="45" y="0" width="160" height="260" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dx="-2" dy="4"/>
+<feGaussianBlur stdDeviation="8"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

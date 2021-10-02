@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Name Printer</title>
+  </head>
+  <body>
+    <div class='wrapper'>
+        <form id='nameForm'>
+            <div class='form-uname'>
+                <!-- <label class="writeName" id='nameLabel' for='nameField'>Write your name:</label> -->
+                <input id='nameField' class="input-group-text" type='text' value="Write your name..." maxlength='25'></input>
+            </div>
+            <div class='form-sub'>
+                <button id='subButton' class="btn btn-success" type='button'>Print your name!</button>
+            </div>
+        </form>
+        
+        <div>
+            <p class="result" id='result'></p></div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

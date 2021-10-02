@@ -4,13 +4,13 @@ const messageInboxElement = document.querySelector("#message-inbox");
 // check if username store on storage or not
 if (!username) redirectToHomepage();
 
-socket.emit('new-user', {username, roomName});
+socket.emit("new-user", { username, roomName });
 
-socket.on('welcome-user', (data) => {
+socket.on("welcome-user", (data) => {
   displayMessage(data);
 });
 
-socket.on('new-user-joined', (data) => {
+socket.on("new-user-joined", (data) => {
   displayMessage(data);
 });
 
@@ -21,13 +21,13 @@ const sendMsgBtnElement = document.querySelector("#send-message-btn");
 
 sendMsgBtnElement.addEventListener("click", messageSendHandler);
 
-socket.on('chat-message', (data) => {
+socket.on("chat-message", (data) => {
   displayMessage(data);
-})
+});
 
-socket.on('user-left', (data) => {
+socket.on("user-left", (data) => {
   displayMessage(data);
-})
+});
 
 function redirectToHomepage() {
   window.location.href = "/root";
@@ -49,13 +49,13 @@ function createMessageWrapperElement(data) {
   return messageWrapperElement;
 }
 
-function createMsgWrapperChildren({message, sender}) {
+function createMsgWrapperChildren({ message, sender }) {
   const messageWrapperChildren = document.createDocumentFragment();
 
   messageWrapperChildren.appendChild(createSenderNameElement(sender));
   messageWrapperChildren.appendChild(createMessageElement(message));
 
-  return messageWrapperChildren;;
+  return messageWrapperChildren;
 }
 
 function createSenderNameElement(sender) {
@@ -82,7 +82,7 @@ function messageSendHandler(event) {
     return;
   }
 
-  displayMessage({message: messageBoxValue, sender: "you"});
-  socket.emit('new-message', messageBoxValue);
+  displayMessage({ message: messageBoxValue, sender: "you" });
+  socket.emit("new-message", messageBoxValue);
   messageBoxElement.value = "";
 }

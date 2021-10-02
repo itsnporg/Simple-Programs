@@ -1,5 +1,4 @@
 class Evaluate_Postfix:
-
     def __init__(self, size):
         self.top = -1
         self.size = size
@@ -29,7 +28,7 @@ class Evaluate_Postfix:
             else:
                 Val_1 = self.Pop()
                 Val_2 = self.Pop()
-                self.Push(str(eval(Val_2+i+Val_1)))
+                self.Push(str(eval(Val_2 + i + Val_1)))
         return int(self.Pop())
 
 

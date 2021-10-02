@@ -1,1 +1,21 @@
-{"text":"Can it fly?","yes":{"text":"Can it swim?","yes":{"text":"Duck"},"no":{"text":"parrot"}},"no":{"text":"Can it climb trees?","yes":{"text":"Is it a pet?","yes":{"text":"cat"},"no":{"text":"monkey"}},"no":{"text":"Is it taller than 1 meter?","yes":{"text":"cow"},"no":{"text":"dog"}}}}
+{
+  "text": "Can it fly?",
+  "yes": {
+    "text": "Can it swim?",
+    "yes": { "text": "Duck" },
+    "no": { "text": "parrot" }
+  },
+  "no": {
+    "text": "Can it climb trees?",
+    "yes": {
+      "text": "Is it a pet?",
+      "yes": { "text": "cat" },
+      "no": { "text": "monkey" }
+    },
+    "no": {
+      "text": "Is it taller than 1 meter?",
+      "yes": { "text": "cow" },
+      "no": { "text": "dog" }
+    }
+  }
+}

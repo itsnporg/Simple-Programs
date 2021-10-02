@@ -1,6 +1,6 @@
-const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
-const fetch = require("node-fetch")
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const { MessageEmbed } = require("discord.js");
+const fetch = require("node-fetch");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -11,22 +11,22 @@ module.exports = {
     ),
 
   async execute(interaction) {
-    const user = interaction.options.getUser("user")
+    const user = interaction.options.getUser("user");
     const { image } = await fetch("http://api.nekos.fun:8080/api/hug").then(
       (res) => res.json()
-    )
+    );
     if (user === interaction.user || user.bot) {
       await interaction.reply(
         `You cannot hug ${user.bot ? "a bot" : "yourself."}!`
-      )
-      return
+      );
+      return;
     }
     const hugEmbed = new MessageEmbed()
       .setAuthor(`${interaction.user.tag} hugged ${user.tag}.`)
       .setImage(image)
       .setColor("GREEN")
-      .setTimestamp()
+      .setTimestamp();
 
-    await interaction.reply({ embeds: [hugEmbed] })
+    await interaction.reply({ embeds: [hugEmbed] });
   },
-}
+};

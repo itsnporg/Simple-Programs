@@ -4,7 +4,7 @@
 const readlineSync = require("readline-sync");
 
 // TODO : reverse word using simple for loop
-function reverseWord(word) {
+const reverseWord = (word) => {
   //* create an emptyy array to store the user input
   let arr = [];
   // * run a for loopto loop through the user input word
@@ -13,7 +13,7 @@ function reverseWord(word) {
     arr.push(word[i]);
   }
   console.log(arr.reverse().join(""));
-}
+};
 
 // TODO : using methods
 const mirrorWords = (word) => {

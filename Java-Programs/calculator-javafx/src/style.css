@@ -1,0 +1,28 @@
+.button{
+    -fx-border-width : 30;
+    -fx-background-color: #343443;
+    -fx-font-size : 18;
+    -fx-text-fill : #fff;
+}
+
+.button:hover{
+    -fx-border-width: 2;
+    -fx-border-color: #2C3039;
+    -fx-border-radius: 25;
+    -fx-background-color: #282C35;
+    -fx-cursor: hand;
+}
+.button:pressed{
+    -fx-border-width: 2;
+    -fx-border-color: #26D4B6;
+    -fx-border-radius: 25;
+    -fx-cursor: closed_hand;
+}
+
+.label{
+    -fx-font-family: "Courier New";
+    -fx-font-size: 28;
+    -fx-font-weight: bold;
+}
+
+

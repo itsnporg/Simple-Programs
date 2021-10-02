@@ -1,5 +1,6 @@
 # Khwopa-Snake
-Works smoothly on turbo c++. 
+
+Works smoothly on turbo c++.
 Screenshots:
 
 ![image](https://user-images.githubusercontent.com/54242036/135562307-4a27ccc8-8941-4f2d-aa8e-2e4e8fdec95a.png)
