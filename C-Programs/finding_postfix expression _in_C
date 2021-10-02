@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<math.h>
+#define SIZE 20
+int STACK[SIZE], top = -1;
+
+void push(int item)
+{
+  if(top == SIZE-1)
+    printf("\nSTACK OVERFLOWED");
+  else
+  {
+    top++;
+    STACK[top] = item;
+  }
+}
+
+int pop()
+{
+  if(top == -1)
+    printf("STACK UNDERFLOWED");
+  else
+  {
+    return STACK[top--];
+  }
+}
+
+int main(void) 
+{
+  char postfix[SIZE];
+  int i = 0, a, b, c;
+  printf("\nEnter the POSTFIX Expression : ");
+  scanf("%s", postfix);
+
+  while(postfix[i] != '\0')
+  {
+    if(postfix[i] >='0' && postfix[i] <= '9')
+    {
+      int n = postfix[i]-48;
+      push(n);
+    }
+    else if(postfix[i] ==  '+' || postfix[i] ==  '-' || postfix[i] ==  '*' || postfix[i] ==  '/' || postfix[i] ==  '^')
+    {
+      a = pop();
+      b = pop();
+      switch(postfix[i])
+      {
+        case '+' : 
+          c = b+a;
+          push(c);
+          break;
+
+        case '-' : 
+          c = b-a;
+          push(c);
+          break;
+
+        case '*' : 
+          c = b*a;
+          push(c);
+          break;
+
+        case '/' : 
+          c = b/a;
+          push(c);
+          break;
+
+        case '^' : 
+          c = pow(b,a);
+          push(c);
+          break;
+      }
+    }
+    i++;
+  }
+
+  printf("Result is %d ", STACK[top]);
+  return 0;
+}
