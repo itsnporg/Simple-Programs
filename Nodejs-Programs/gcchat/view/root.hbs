@@ -1,56 +1,57 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, inital-scale=1">
-  <title>RootDir:~</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, inital-scale=1" />
+    <title>RootDir:~</title>
     <script src="/socket.io/socket.io.js"></script>
-  <script src="/script/client.js"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style/normalize.css" media="all">
-  <link rel="stylesheet" href="/style/root.css" media="all">
-</head>
-<body>
+    <script src="/script/client.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/normalize.css" media="all" />
+    <link rel="stylesheet" href="/style/root.css" media="all" />
+  </head>
+  <body>
     <!-- start available rooms -->
-  <div class="container">
-    <h2>
-      <span class="fun-retype">void</span>
-      <span class="fun-name">init_root(<span class="fun-arg">void</span>);</span>
-    </h2>
+    <div class="container">
+      <h2>
+        <span class="fun-retype">void</span>
+        <span class="fun-name">init_root(<span
+            class="fun-arg"
+          >void</span>);</span>
+      </h2>
 
-    <div class="nav-menus">
-      <a href="/create_room">
-        [create_room]
-      </a>
-      <a href="/change_username">
-        [change_username]
-      </a>
-    </div>
-    <!-- start available rooms -->
-    <div id="available-rooms" class="available-rooms-wrapper">
-      <div class="available-rooms-txt">
-        Available rooms:
+      <div class="nav-menus">
+        <a href="/create_room">
+          [create_room]
+        </a>
+        <a href="/change_username">
+          [change_username]
+        </a>
       </div>
+      <!-- start available rooms -->
+      <div id="available-rooms" class="available-rooms-wrapper">
+        <div class="available-rooms-txt">
+          Available rooms:
+        </div>
 
-      {{#each rooms}}
-        <div class="room">
-          <a 
-             class="room__link" 
-             href="/room/{{this}}"
-             >
-             {{this}}
-          </a>
-        </div>
+        {{#each rooms}}
+          <div class="room">
+            <a class="room__link" href="/room/{{this}}">
+              {{this}}
+            </a>
+          </div>
         {{else}}
-        <div class="no-rooms-info">
-          no any rooms created yet
-        </div>
+          <div class="no-rooms-info">
+            no any rooms created yet
+          </div>
         {{/each}}
-    </div>
+      </div>
       <!-- end available rooms -->
-  </div>
+    </div>
     <!-- end container  -->
-  <script src="/script/root/root.js"></script>
-</body>
+    <script src="/script/root/root.js"></script>
+  </body>
 </html>

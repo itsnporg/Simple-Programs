@@ -1,10 +1,10 @@
-const Sequelize = require("sequelize")
+const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize("database", "user", "password", {
   host: "localhost",
   dialect: "sqlite",
   storage: "database.sqlite",
-})
+});
 
 const Mutes = sequelize.define("mutes", {
   userID: {
@@ -14,6 +14,6 @@ const Mutes = sequelize.define("mutes", {
   reason: Sequelize.STRING,
   guildID: Sequelize.BIGINT,
   roles: Sequelize.STRING,
-})
+});
 
-module.exports = { Mutes }
+module.exports = { Mutes };

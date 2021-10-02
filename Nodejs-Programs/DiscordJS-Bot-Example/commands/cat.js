@@ -1,6 +1,6 @@
-const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
-const fetch = require("node-fetch")
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const { MessageEmbed } = require("discord.js");
+const fetch = require("node-fetch");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -16,10 +16,10 @@ module.exports = {
           .setColor("GREEN")
           .setAuthor("Here's a cat for you.")
           .setTimestamp()
-          .setFooter(`Requested by ${interaction.user.tag}`)
+          .setFooter(`Requested by ${interaction.user.tag}`);
 
-        interaction.reply({ embeds: [catEmbed], ephemeral: true })
+        interaction.reply({ embeds: [catEmbed], ephemeral: true });
       })
-    )
+    );
   },
-}
+};

@@ -1,6 +1,7 @@
 import os
-from dotenv import load_dotenv
+
 import lightbulb
+from dotenv import load_dotenv
 
 load_dotenv()
 

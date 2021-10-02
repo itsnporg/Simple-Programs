@@ -1,4 +1,3 @@
-
 # Link And Image Scraper
 
 ### A command line tool that can **print all links detected** in href and **image links detected**, as well as **download** pictures found

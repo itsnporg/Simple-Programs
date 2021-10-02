@@ -1,16 +1,16 @@
-from datetime import date, datetime, time
 import json
+from datetime import date, datetime, time
+
 date_format = "%m/%d/%Y"
 time_format = "%H:%M:%S"
 
 
 class Library:
-
     def __init__(self) -> None:
-        with open('books.txt', 'r') as f:
+        with open("books.txt", "r") as f:
             lines = f.readlines()
-        lines = list(map(lambda x: x.strip('\n').split(','), lines))
-        id_list = range(1, len(lines)+1)
+        lines = list(map(lambda x: x.strip("\n").split(","), lines))
+        id_list = range(1, len(lines) + 1)
         self.id_list = id_list
         self.books = dict(zip(id_list, lines))
 
@@ -31,8 +31,8 @@ class Library:
         header = self.header
         books = self.books
         print(header)
-        print('_'*len(header)+'\n')
-        for i in range(1, len(books)+1):
+        print("_" * len(header) + "\n")
+        for i in range(1, len(books) + 1):
             print(self.get_body(i))
 
     # LEND
@@ -41,31 +41,35 @@ class Library:
         books = self.books
         stock = int(books.get(book_id)[2])
         if stock < 1:
-            print('\nNot enough stock\n')
+            print("\nNot enough stock\n")
             return False
         else:
-            book_index = book_id-1
-            with open('books.txt', 'r') as f:
+            book_index = book_id - 1
+            with open("books.txt", "r") as f:
                 lines = f.readlines()
             stock -= 1
-            lines[book_index] = f'{books[book_id][0]},{books[book_id][1]},{stock},{books[book_id][3]}\n'
-            with open('books.txt', 'w') as f:
+            lines[
+                book_index
+            ] = f"{books[book_id][0]},{books[book_id][1]},{stock},{books[book_id][3]}\n"
+            with open("books.txt", "w") as f:
                 f.writelines(lines)
             return True
 
     def get_lend_log(self, book_id, name):
-        return json.dumps({
-            "id": book_id,
-            "borrower_name": name,
-            "book_name": self.books[book_id][0],
-            "time": datetime.now().strftime(time_format),
-            "date": date.today().strftime(date_format),
-            "returned": False,
-        })
+        return json.dumps(
+            {
+                "id": book_id,
+                "borrower_name": name,
+                "book_name": self.books[book_id][0],
+                "time": datetime.now().strftime(time_format),
+                "date": date.today().strftime(date_format),
+                "returned": False,
+            }
+        )
 
     def store_lend_log(self, book_id, name):
-        with open('lends.txt', 'a')as f:
-            f.writelines(f'{self.get_lend_log(book_id, name)}\n')
+        with open("lends.txt", "a") as f:
+            f.writelines(f"{self.get_lend_log(book_id, name)}\n")
             print("\nBOOK LENT\n")
 
     def lend_book(self):
@@ -77,76 +81,84 @@ class Library:
         else:
             print("\nPlease enter a correct ID\n")
             self.lend_book()
+
     # END LEND
 
     # RETURN
 
     def check_marked_returned(self, book_id, name):
-        with open('lends.txt', 'r')as f:
+        with open("lends.txt", "r") as f:
             lines = [json.loads(x) for x in f.readlines()]
         for lend in lines:
-            if lend.get('borrower_name') == name and lend.get('id') == book_id and lend.get('returned') == False:
-                lend['returned'] = True
+            if (
+                lend.get("borrower_name") == name
+                and lend.get("id") == book_id
+                and lend.get("returned") == False
+            ):
+                lend["returned"] = True
                 check = True
                 break
             else:
                 check = False
         if check:
-            dump = [f'{json.dumps(x)}\n' for x in lines]
-            with open('lends.txt', 'w')as f:
+            dump = [f"{json.dumps(x)}\n" for x in lines]
+            with open("lends.txt", "w") as f:
                 f.writelines(dump)
         return check
 
     def increase_stock(self, book_id):
         books = self.books
         stock = int(books.get(book_id)[2])
-        book_index = book_id-1
-        with open('books.txt', 'r') as f:
+        book_index = book_id - 1
+        with open("books.txt", "r") as f:
             lines = f.readlines()
         stock += 1
-        lines[book_index] = f'{books[book_id][0]},{books[book_id][1]},{stock},{books[book_id][3]}\n'
-        with open('books.txt', 'w') as f:
+        lines[
+            book_index
+        ] = f"{books[book_id][0]},{books[book_id][1]},{stock},{books[book_id][3]}\n"
+        with open("books.txt", "w") as f:
             f.writelines(lines)
 
     def calculate(self, book_id, name):
-        with open('lends.txt', 'r')as f:
+        with open("lends.txt", "r") as f:
             lines = f.readlines()
         if lines:
-            lines = [json.loads(x)for x in lines]
+            lines = [json.loads(x) for x in lines]
             for lend in lines:
-                if lend.get('borrower_name') == name and lend.get('id') == book_id:
+                if lend.get("borrower_name") == name and lend.get("id") == book_id:
                     price = self.books[book_id][3]
-                    lend_date = datetime.strptime(
-                        lend['date'], date_format).date()
-                    date_difference = (date.today()-lend_date).days
+                    lend_date = datetime.strptime(lend["date"], date_format).date()
+                    date_difference = (date.today() - lend_date).days
                     if date_difference >= 10:
-                        fine = ((date_difference-10)*2)
-                        price = int(price)+fine
-                        print(
-                            f'\nYou will have to pay {price} including fine {fine}\n')
+                        fine = (date_difference - 10) * 2
+                        price = int(price) + fine
+                        print(f"\nYou will have to pay {price} including fine {fine}\n")
                         return price
                     else:
                         print(
-                            f'\nYou will have to pay {price}. Thank you for returning in time')
+                            f"\nYou will have to pay {price}. Thank you for returning in time"
+                        )
                         return price
         else:
             print("\nCANNOT RETURN WITHOUT LENDS\n")
 
     def get_return_log(self, book_id, name):
         paid_price = self.calculate(book_id, name)
-        return json.dumps({
-            "id": book_id,
-            "borrower_name": name,
-            "book_name": self.books[book_id][0],
-            "time": datetime.now().strftime(time_format),
-            "date": date.today().strftime(date_format),
-            "paid_price": paid_price,
-        })
+        return json.dumps(
+            {
+                "id": book_id,
+                "borrower_name": name,
+                "book_name": self.books[book_id][0],
+                "time": datetime.now().strftime(time_format),
+                "date": date.today().strftime(date_format),
+                "paid_price": paid_price,
+            }
+        )
 
     def store_return_log(self, book_id, name):
-        with open('returns.txt', 'a')as f:
-            f.writelines(f'{self.get_return_log(book_id,name)}\n')
-            print('\nBook returned.\n')
+        with open("returns.txt", "a") as f:
+            f.writelines(f"{self.get_return_log(book_id,name)}\n")
+            print("\nBook returned.\n")
 
     def return_book(self):
         book_id = int(input("Enter book ID to return: "))
@@ -167,14 +179,16 @@ library = Library()
 
 def main():
 
-    print('''
+    print(
+        """
     Select and option!!!
     1. Display all books
     2. Request a borrow
     3. Return a book
     4. Main Menu
     5. Exit
-    ''')
+    """
+    )
     user_input = input("Enter an option: ")
 
     if user_input == "5":
@@ -193,7 +207,7 @@ def main():
         library.return_book()
 
     else:
-        print('\n Please enter valid option \n')
+        print("\n Please enter valid option \n")
         return False
 
 

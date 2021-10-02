@@ -1,4 +1,4 @@
-const { Mutes, Warns } = require("../models")
+const { Mutes, Warns } = require("../models");
 module.exports = {
   name: "ready",
   once: true,
@@ -6,10 +6,10 @@ module.exports = {
     client.user.setPresence({
       activities: [{ name: "discord.js Pog" }],
       status: "dnd",
-    })
-    console.log(`Ready! Logged in as ${client.user.tag}`)
-    Mutes.sync()
-    Warns.sync()
-    console.log("Synced Mutes")
+    });
+    console.log(`Ready! Logged in as ${client.user.tag}`);
+    Mutes.sync();
+    Warns.sync();
+    console.log("Synced Mutes");
   },
-}
+};

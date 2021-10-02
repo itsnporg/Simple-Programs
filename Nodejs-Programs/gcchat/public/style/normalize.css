@@ -22,9 +22,9 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #1C1C1C;
-  color: #FAFAFA;
+  font-family: "Open Sans", sans-serif;
+  background-color: #1c1c1c;
+  color: #fafafa;
 }
 
 /**
@@ -177,7 +177,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -187,7 +188,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -355,7 +357,8 @@ template {
   padding: 1.5em;
 }
 
-.container > h1, h2 {
+.container > h1,
+h2 {
   font-weight: 700;
 }
 
@@ -366,11 +369,11 @@ template {
   padding-bottom: 0.6em;
 }
 
-.fun-retype, .fun-arg {
+.fun-retype,
+.fun-arg {
   color: #afd700;
 }
 
 .fun-name {
   color: #d0d0d0;
 }
-
