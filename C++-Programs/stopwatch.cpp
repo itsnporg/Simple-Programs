@@ -1,6 +1,5 @@
-#include<conio.h>
 #include<process.h>
-#include<iostream.h>
+#include<iostream>
 #include<dos.h>
 
 int h=0,m=0,s=0,ms=0;
