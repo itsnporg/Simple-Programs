@@ -8,8 +8,10 @@ func main() {
 	fmt.Printf("Enter a number: ")
 	fmt.Scanf("%d", &num)
 
-	if num >= 0 {
+	if num > 0 {
 		fmt.Printf("It's a positive number")
+	} else if num == 0 {
+		fmt.Printf("It's zero")
 	} else {
 		fmt.Printf("It's a negative number")
 	}
