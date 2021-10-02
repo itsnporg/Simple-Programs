@@ -21,10 +21,13 @@ const getCDNLink = (link, isMinify = false) => {
 	const githubAccount = linkParts[indexOfGithub + 1]
 	const repoName = linkParts[indexOfGithub + 2]
 	const branchType = linkParts[indexOfGithub + 4]
-	const directoryPath = linkParts
+	let directoryPath = linkParts
 		.slice(indexOfGithub + 5, linkParts.length - 1)
 		.toString()
 		.replace(/,/g, "/")
+
+	// check file is in inner directory, if yes then add
+	if (directoryPath !== "") directoryPath = `/${directoryPath}`
 
 	// if isMinify is true then change the file to compressed file
 	if (isMinify) {
@@ -32,7 +35,7 @@ const getCDNLink = (link, isMinify = false) => {
 	}
 
 	// concat all the parts and generate the link and return it
-	return `https://cdn.jsdelivr.net/gh/${githubAccount}/${repoName}@${branchType}/${directoryPath}/${fileName}`
+	return `https://cdn.jsdelivr.net/gh/${githubAccount}/${repoName}@${branchType}${directoryPath}/${fileName}`
 }
 
 export default getCDNLink
