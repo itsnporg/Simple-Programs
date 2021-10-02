@@ -1,7 +1,7 @@
 body{
-	background-color:#232323; 
+	background-color: #fff;
 	margin: 0;
-	font-family: "Avenir";
+	font-family: 'Courier New', Courier, monospace;
 }
 
 .square{
@@ -22,7 +22,7 @@ body{
 h1{
 	text-align: center;
 	line-height: 1.1;
-	font-weight: normal;
+	font-weight: bold;
 	color: white;
 	background: steelblue;
 	margin: 0;
@@ -52,12 +52,13 @@ h1{
 	background: steelblue;
 }
 button{
-	border: none;
+	margin:5px 5px;
+	border-radius: 2rem;
+	border:2px solid rebeccapurple;
 	background: none;
-	text-transform: uppercase;
 	height: 100%;
-	font-weight: 700;
-	color: steelblue;
+	font-weight: 100;
+	/* color: steelblue; */
 	letter-spacing: 1px;
 	font-size: inherit;
 	transition: all 0.4s;
@@ -66,5 +67,5 @@ button{
 
 button:hover {
 	color: white;
-	background: steelblue;
+	background: rebeccapurple;
 }
