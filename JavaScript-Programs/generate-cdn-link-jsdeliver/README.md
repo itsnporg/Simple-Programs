@@ -6,8 +6,6 @@ This is the small javascript code where it generate the jsdeliver cdn link of th
 
 ## Table Of Content
 
-- [CDN Link Generator of Github Repo File](#cdn-link-generator-of-github-repo-file)
-  - [Table Of Content](#table-of-content)
   - [Supported File](#supported-file)
   - [How to use](#how-to-use)
   - [Credits](#credits)
@@ -16,19 +14,19 @@ This is the small javascript code where it generate the jsdeliver cdn link of th
 
 ## Supported File
 
-* CSS
-* Javascript
+- CSS
+- Javascript
 
 ## How to use
 
 We can easily integrated this file as module which exports the default function.
 
-``` getCDNLink(link, isMinify)  ```
+` getCDNLink(link, isMinify)  `
 
-* link (type: string): 
+- link (type: string): 
   this is the link of the file in github
 
-* isMinify (type: boolean): this is used to get minified link. Default is false. This is optional parameter. Pass true for minified link.
+- isMinify (type: boolean): this is used to get minified link. Default is false. This is optional parameter. Pass true for minified link.
 
 ---
 
