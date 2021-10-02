@@ -109,7 +109,7 @@ int sumOfIndividualDigits() {
 */
 void isVowel(char character) {
     int isVowel = NO;
-    char vowels[10] = {'a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'}; //This is an example of an array.
+    char vowels[] = {'a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'}; //This is an example of an array.
 
     if (character != ' ') {
         for (int i = 0; i < 10; i++) {
@@ -132,10 +132,11 @@ void isVowel(char character) {
 /*Fibonacci Series*/
 void fibonacciSeries(int numOfSeries) {
 
-    int x = 0, y = 1, z = 0, count = 0;
+    unsigned long long int x = 0, y = 1, z = 0;
+    int count = 0;
 
     while (count != numOfSeries) { //for loop could have been used here but to include all loops and also show '++' increment I used while loop
-        printf("%d ", x);
+        printf("%lld ", x);
         z = x + y;
         x = y;
         y = z;
