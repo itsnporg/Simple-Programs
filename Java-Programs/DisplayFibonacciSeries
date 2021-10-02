@@ -1,4 +1,4 @@
-//using for loop
+// using for loop
 import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
