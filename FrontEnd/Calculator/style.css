@@ -1,0 +1,134 @@
+ body{
+ 	font-family: 'Orbitron', sans-serif;
+	 padding: 0%;
+	 margin: 0%;
+
+}
+.container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url(background.jpg);
+	 background-repeat: no-repeat;
+	 overflow-x: hidden;
+	 padding: 0px;
+	 margin: 0px;
+}
+ #calculator{
+ 	width: 320px;
+	height: 540px;
+	background-color: black;
+	margin: 0 auto;
+	top: 70px;
+	position: relative;
+	border-radius: 40px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	animation: calc 1.5s both;
+ }
+ @keyframes calc{
+	 from{
+		transform: translateY(60px);
+		transform: scale(0.9);
+	 }
+	 to{
+		 transform: translateY(0px);
+		 transform: scale(1);
+	 }
+ }
+#result{
+	height: 120px;
+}
+#display{
+	width: 280px;
+	height: 105px;
+	background-image: url(display.jpg);
+	margin: 0 auto;
+	top: 20px;
+	position: relative;
+	border-radius: 30px;
+	text-align: right;
+	padding-bottom: 4px
+}
+#history{
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 15px;
+	color: black;
+}
+#output{
+	text-align: right;
+	height: 60px;
+	margin: 10px 20px;
+	font-size: 30px;
+}
+#keyboard{
+	height: 500px;
+}
+.operator, .number, .empty{
+	width: 50px;
+	height: 50px;
+	margin: 15px;
+	float: left;
+	border-radius: 50%;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 15px;
+}
+.number{
+	background-color: #eaedef;
+}
+.empty{
+	background-color: black;
+}
+.number, .operator{
+	cursor: pointer;
+}
+.operator:active, .number:active{
+	font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+	outline: 0;
+}
+.number:hover , .operator:hover{
+	background-image: url(hover.jpg);
+	/*background-color: grey;*/
+	
+}
+button:nth-child(4){
+	font-size: 30px;
+	background-image: url(yellow.jpg);
+}
+button:nth-child(8){
+	font-size: 30px;
+	background-image: url(reddish.jpg);
+}
+button:nth-child(12){
+	font-size: 30px;
+	background-image: url(pink.jpg);
+}
+button:nth-child(16){
+	font-size: 30px;
+	background-image: url(blue.jpg);
+}
+button:nth-child(20){
+	font-size: 30px;
+	background-color: #9477af;
+}
+
+@media screen and (min-width: 480px) {
+	html {
+	  height: 100%;
+	}
+	.container{
+		overflow-x: hidden;
+		background-position: center;
+		background-size: cover;
+	}
+	
+  }
