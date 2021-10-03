@@ -6,7 +6,6 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-// promisify fungsi rl.question
 const question = (query) =>
   new Promise((resolve) => rl.question(query, resolve));
 
@@ -16,23 +15,21 @@ const run = async () => {
       "Menu \n 1. Write file \n 2. Read file \n\n Choose menu : "
     );
     if (input == 1) {
-      const nama = await question("Enter your name : ");
-      const umur = await question("Enter your age : ");
-      const biodata = { nama, umur };
+      const name = await question("Enter your name : ");
+      const age = await question("Enter your age : ");
+      const biodata = { name, age };
 
       const rawData = await fs.readFile("data/file.json", "utf-8");
       const data = JSON.parse(rawData);
       data.push(biodata);
 
       await fs.writeFile("data/file.json", JSON.stringify(data));
-      console.log("Berhasil menulis file");
     } else if (input == 2) {
       const data = await fs.readFile("data/file.json", "utf-8");
-      console.log(JSON.parse(data));
     }
     rl.close();
   } catch (err) {
-    console.error("Terjadi kesalahan: ", err);
+    console.error("Error: ", err);
   }
 };
 
