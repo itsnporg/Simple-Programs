@@ -23,10 +23,11 @@ def countingSort(arr, exp1):
     for i in range(0, len(arr)):
         arr[i] = output[i]
 
+
 def radixSort(arr):
     max1 = max(arr)
 
     exp = 1
     while max1 / exp > 0:
         countingSort(arr, exp)
-        exp *= 10 
+        exp *= 10

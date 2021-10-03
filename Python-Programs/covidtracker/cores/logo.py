@@ -1,9 +1,12 @@
 import subprocess as sb
+
 try:
-    from colorama import Fore, Back, Style
+    from colorama import Back, Fore, Style
 except Exception:
-    check_install=sb.run('sudo apt-get intall colorama',shell=True,capture_output=True)
-    if check_install==0:
+    check_install = sb.run(
+        "sudo apt-get intall colorama", shell=True, capture_output=True
+    )
+    if check_install == 0:
         pass
 
 import sys
@@ -11,7 +14,9 @@ import sys
 
 class Logo:
     def logo(self):
-        print(Fore.GREEN+'''
+        print(
+            Fore.GREEN
+            + """
                                                  
    _____           _     _   _______             _             
   / ____|         (_)   | | |__   __|           | |            
@@ -21,6 +26,5 @@ class Logo:
   \_____\___/ \_/ |_|\__,_|    |_|_|  \__,_|\___|_|\_\___|_|   
                             
               version: 1.0.1                                 
-    ''')
-
-
+    """
+        )

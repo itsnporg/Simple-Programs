@@ -2,9 +2,10 @@ import random
 import string
 import urllib.request
 
-import discord
 from dotenv import load_dotenv
 from PIL import Image
+
+import discord
 
 load_dotenv(".env")
 import os

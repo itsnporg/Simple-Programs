@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Conversion</title>
+    <link rel="stylesheet" href="./css/bootstrap-4.3.1.min.css">
+    <link rel="stylesheet" href="./css/mdb.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="h-100">
+    <div class="container-fluid bg-dark p-5">
+        <h1 class="text-white text-center">Number Conversion</h1>
+    </div>
+    <div class="container-fluid ">
+        <div class="d-flex justify-content-center align-items-center py-5">
+            <div class="modal-content">
+                <!--Body-->
+                <div class="modal-body">
+                    <form action="" id="form">
+                        <div class="row selector align-items-center">
+                            <div class="col-lg-5 col-md-12 col-sm-12 input">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="alert-message">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <label for="input-type" class="font-weight-bold">Choose Input System :</label>
+                                        <select id="input-type"
+                                            class="browser-default custom-select pink-border select-pink mb-3">
+                                            <option value="" selected disabled>Choose the input system here..
+                                            </option>
+                                            <option value="1">Binary System</option>
+                                            <option value="2">Decimal System</option>
+                                            <option value="3">Octal System</option>
+                                            <option value="4">Hexadecimal System</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="font-weight-bold" id="input-label" for="input-textarea">Input
+                                        Value :</label>
+                                    <textarea class="form-control pink-border" id="input-textarea" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div
+                                class="middle col-lg-2 col-md-12 col-sm-12 d-flex flex-column justify-content-center align-items-center">
+                                <button class="btn btn-primary font-weight-bold ">Convert </button>
+                                <a onclick="clearValue()" role="button" class="btn btn-warning font-weight-bold ">Reset
+                                </a>
+                            </div>
+                            <div class="col-lg-5 col-md-12 col-sm-12 output">
+                                <div class="form-group">
+                                    <label class="font-weight-bold" id="output-label-1" for="output-value-1">Output
+                                        1 :</label>
+                                    <textarea readonly class="form-control pink-border  bg-white" id="output-value-1"
+                                        rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="font-weight-bold" id="output-label-2" for="output-value-2">Output
+                                        2 :</label>
+                                    <textarea readonly class="form-control pink-border  bg-white" id="output-value-2"
+                                        rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="font-weight-bold" id="output-label-3" for="output-value-3">Output
+                                        3 :</label>
+                                    <textarea readonly class="form-control pink-border bg-white" id="output-value-3"
+                                        rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.5.1.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/mdb.min.js"></script>
+<script src="js/conversion.js"></script>
+<script>
+    $(document).ready(function () {
+        // Material Select
+        $('.mdb-select').materialSelect({
+        });
+    })
+</script>
+
+</html>

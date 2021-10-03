@@ -7,8 +7,8 @@ will enable us to run the search engine and provide results for our search queri
 
 
 import os
-import sys
 import string
+import sys
 
 
 def create_index(filenames, index, file_titles):
@@ -32,16 +32,16 @@ def create_index(filenames, index, file_titles):
                 lines = lines.strip().split()
                 for terms in lines:
                     terms = terms.strip(string.punctuation).lower()
-                    if terms != '':
+                    if terms != "":
                         if terms not in index:
                             index[terms] = [file]
                         else:
                             file_list = index[terms]
                             file_list.append(file)
         with open(file) as f:
-                line_temp = f.readlines()
-                title = line_temp[0].strip()
-                file_titles[file] = title
+            line_temp = f.readlines()
+            title = line_temp[0].strip()
+            file_titles[file] = title
 
 
 def search(index, query):
@@ -60,7 +60,7 @@ def search(index, query):
         for terms in query_ls:
             if terms in index:
                 new_ls = index[terms]
-                posting_ls = common(posting_ls,new_ls)
+                posting_ls = common(posting_ls, new_ls)
             else:
                 posting_ls = []
                 break
@@ -91,14 +91,14 @@ def do_searches(index, file_titles):
     """
     while True:
         query = input("Query (empty query to stop): ")
-        query = query.lower()                   # convert query to lowercase
-        if query == '':
+        query = query.lower()  # convert query to lowercase
+        if query == "":
             break
         results = search(index, query)
 
         # display query results
         print("Results for query '" + query + "':")
-        if results:                             # check for non-empty results list
+        if results:  # check for non-empty results list
             for i in range(len(results)):
                 title = file_titles[results[i]]
                 print(str(i + 1) + ".  Title: " + title + ",  File: " + results[i])
@@ -118,7 +118,7 @@ def textfiles_in_dir(directory):
     filenames = []
 
     for filename in os.listdir(directory):
-        if filename.endswith('.txt'):
+        if filename.endswith(".txt"):
             filenames.append(os.path.join(directory, filename))
 
     return filenames
@@ -138,29 +138,33 @@ def main():
 
     num_args = len(args)
     if num_args < 1 or num_args > 2:
-        print('Please specify directory of files to index as first argument.')
-        print('Add -s to also search (otherwise, index and file titles will just be printed).')
+        print("Please specify directory of files to index as first argument.")
+        print(
+            "Add -s to also search (otherwise, index and file titles will just be printed)."
+        )
     else:
         # args[0] should be the folder containing all the files to index/search.
         directory = args[0]
         if os.path.exists(directory):
             # Build index from files in the given directory
             files = textfiles_in_dir(directory)
-            index = {}          # index is empty to start
-            file_titles = {}    # mapping of file names to article titles is empty to start
+            index = {}  # index is empty to start
+            file_titles = (
+                {}
+            )  # mapping of file names to article titles is empty to start
             create_index(files, index, file_titles)
 
             # Either allow the user to search using the index, or just print the index
-            if num_args == 2 and args[1] == '-s':
+            if num_args == 2 and args[1] == "-s":
                 do_searches(index, file_titles)
             else:
-                print('Index:')
+                print("Index:")
                 print(index)
-                print('File names -> document titles:')
+                print("File names -> document titles:")
                 print(file_titles)
         else:
             print('Directory "' + directory + '" does not exist.')
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

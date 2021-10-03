@@ -1,4 +1,4 @@
-# Hacktoberfest-2021
+# Hacktoberfest-2021 (Blacklisted from Hacktoberfest Sorry Guys)
 
 **Welcome to IT Students of Nepal's Hacktoberfest Repository!**
 
