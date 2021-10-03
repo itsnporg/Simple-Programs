@@ -12,7 +12,3 @@ print("Are of the triangle is: ", area)
 
 
 # In[ ]:
-
-
-
-

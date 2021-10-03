@@ -9,8 +9,7 @@ def isSubsetSum(set, n, sum):
     # The value of subset[i][j] will be
     # true if there is a
     # subset of set[0..j-1] with sum equal to i
-    subset = ([[False for i in range(sum + 1)]
-               for i in range(n + 1)])
+    subset = [[False for i in range(sum + 1)] for i in range(n + 1)]
 
     # If sum is 0, then answer is true
     for i in range(n + 1):
@@ -24,11 +23,10 @@ def isSubsetSum(set, n, sum):
     # Fill the subset table in botton up manner
     for i in range(1, n + 1):
         for j in range(1, sum + 1):
-            if j < set[i-1]:
-                subset[i][j] = subset[i-1][j]
-            if j >= set[i-1]:
-                subset[i][j] = (subset[i-1][j] or
-                                subset[i - 1][j-set[i-1]])
+            if j < set[i - 1]:
+                subset[i][j] = subset[i - 1][j]
+            if j >= set[i - 1]:
+                subset[i][j] = subset[i - 1][j] or subset[i - 1][j - set[i - 1]]
 
     # uncomment this code to print table
     # for i in range(n + 1):
@@ -39,11 +37,11 @@ def isSubsetSum(set, n, sum):
 
 
 # Driver program to test above function
-if __name__ == '__main__':
+if __name__ == "__main__":
     set = [3, 34, 4, 12, 5, 2]
     sum = 9
     n = len(set)
-    if (isSubsetSum(set, n, sum) == True):
+    if isSubsetSum(set, n, sum) == True:
         print("Found a subset with given sum")
     else:
         print("No subset with given sum")

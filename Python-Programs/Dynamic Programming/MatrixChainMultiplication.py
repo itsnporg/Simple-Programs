@@ -20,21 +20,20 @@ def MatrixChainOrder(p, n):
 
     # L is chain length.
     for L in range(2, n):
-        for i in range(1, n-L+1):
-            j = i+L-1
-            m[i][j] = float('inf')
+        for i in range(1, n - L + 1):
+            j = i + L - 1
+            m[i][j] = float("inf")
             for k in range(i, j):
 
                 # q = cost/scalar multiplications
-                q = m[i][k] + m[k+1][j] + p[i-1]*p[k]*p[j]
+                q = m[i][k] + m[k + 1][j] + p[i - 1] * p[k] * p[j]
                 m[i][j] = min(q, m[i][j])
 
-    return m[1][n-1]
+    return m[1][n - 1]
 
 
 # Driver program to test above function
 arr = [3, 2, 4, 2, 5]
 size = len(arr)
 
-print("Minimum number of multiplications is " +
-      str(MatrixChainOrder(arr, size)))
+print("Minimum number of multiplications is " + str(MatrixChainOrder(arr, size)))

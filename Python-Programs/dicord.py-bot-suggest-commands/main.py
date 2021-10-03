@@ -1,15 +1,16 @@
-import discord
 import difflib
+
+import discord
 from discord.ext import commands
 from discord.ext.commands import CommandNotFound
 
 intents = discord.Intents.all()
-client = commands.Bot(command_prefix='+', intents=intents, help_command=None)
+client = commands.Bot(command_prefix="+", intents=intents, help_command=None)
 
 
 @client.event
 async def on_ready():
-    print('Bot Online')
+    print("Bot Online")
 
 
 @client.event
@@ -42,7 +43,8 @@ async def send_command_suggestion(ctx: commands.Context, command_name: str) -> N
         e = discord.Embed()
         e.set_author(name="Did you mean:")
         e.description = misspelled_content.replace(
-            command_name, similar_command_name, 1)
+            command_name, similar_command_name, 1
+        )
         await ctx.send(embed=e, delete_after=10.0)
 
 

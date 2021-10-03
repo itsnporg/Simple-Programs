@@ -6,8 +6,29 @@ vowel_counts = {}
 consonant_counts = {}
 
 # Define vowels and consonants
-vowels = ['a', 'e', 'i', 'o', 'u']
-consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'y', 'z']
+vowels = ["a", "e", "i", "o", "u"]
+consonants = [
+    "b",
+    "c",
+    "d",
+    "f",
+    "g",
+    "h",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "v",
+    "w",
+    "y",
+    "z",
+]
 
 for word in string:
     if word in vowels:
@@ -17,5 +38,5 @@ for word in string:
         count = string.count(word)
         consonant_counts[word] = count
 
-print(f'\nVowel Count : {vowel_counts}')
-print(f'Consonant Count : {consonant_counts}')
+print(f"\nVowel Count : {vowel_counts}")
+print(f"Consonant Count : {consonant_counts}")

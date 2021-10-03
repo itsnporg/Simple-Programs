@@ -1,7 +1,6 @@
+import random
 from tkinter import *
 from tkinter import messagebox
-
-import random
 
 root = Tk()
 root.iconbitmap("D:\\Projects\\Python\\Tkinter\\tic_tac_toe\\icon.ico")
@@ -73,7 +72,7 @@ def random_comp_player():
 
 def game_end(char, status, win_combo):
     global buttons
-    if (status == True):
+    if status == True:
         for combo in win_combo:
             buttons[combo]["bg"] = "lightgreen"
         messagebox.showinfo("Winner! ", f"{char} has won :D")
@@ -88,7 +87,7 @@ def game_end(char, status, win_combo):
 
 def handle_click(b, index):
     global count, buttons
-    if (check_board_cell_empty(index)):
+    if check_board_cell_empty(index):
         count = count + 1
         b["text"] = HUMAN
         update_board(index, HUMAN)
@@ -127,14 +126,14 @@ def check_game_end():
 def minimax(board, is_maximizing):
     score_table = {"X": 1, "O": -1, "Tie": 0}
     result = check_game_end()
-    if (result[0] != None):
+    if result[0] != None:
         return score_table[result[0]]
 
     if is_maximizing:
         best_score = float("-inf")
         for i in range(3):
             for j in range(3):
-                if (board[i][j] == ""):
+                if board[i][j] == "":
                     board[i][j] = AI
                     score = minimax(board, False)
                     board[i][j] = ""
@@ -144,7 +143,7 @@ def minimax(board, is_maximizing):
         best_score = float("inf")
         for i in range(3):
             for j in range(3):
-                if (board[i][j] == ""):
+                if board[i][j] == "":
                     board[i][j] = HUMAN
                     score = minimax(board, True)
                     board[i][j] = ""
@@ -159,11 +158,11 @@ def ai_player():
     best_move = 0
     for i in range(3):
         for j in range(3):
-            if (board[i][j] == ""):
+            if board[i][j] == "":
                 board[i][j] = AI
                 score = minimax(board, False)
                 board[i][j] = ""
-                if (score > best_score):
+                if score > best_score:
                     best_score = score
                     best_move = i * 3 + j
 
@@ -190,69 +189,87 @@ def init():
         ["", "", ""],
     ]
 
-    b0 = Button(root,
-                text=" ",
-                font=("Indie Flower", 40),
-                height=2,
-                width=7,
-                bg="white",
-                command=lambda: handle_click(b0, 0))
-    b1 = Button(root,
-                text=" ",
-                font=("Indie Flower", 40),
-                height=2,
-                width=7,
-                bg="white",
-                command=lambda: handle_click(b1, 1))
-    b2 = Button(root,
-                text=" ",
-                font=("Indie Flower", 40),
-                height=2,
-                width=7,
-                bg="white",
-                command=lambda: handle_click(b2, 2))
-    b3 = Button(root,
-                text=" ",
-                font=("Indie Flower", 40),
-                height=2,
-                width=7,
-                bg="white",
-                command=lambda: handle_click(b3, 3))
-    b4 = Button(root,
-                text=" ",
-                font=("Indie Flower", 40),
-                height=2,
-                width=7,
-                bg="white",
-                command=lambda: handle_click(b4, 4))
-    b5 = Button(root,
-                text=" ",
-                font=("Indie Flower", 40),
-                height=2,
-                width=7,
-                bg="white",
-                command=lambda: handle_click(b5, 5))
-    b6 = Button(root,
-                text=" ",
-                font=("Indie Flower", 40),
-                height=2,
-                width=7,
-                bg="white",
-                command=lambda: handle_click(b6, 6))
-    b7 = Button(root,
-                text=" ",
-                font=("Indie Flower", 40),
-                height=2,
-                width=7,
-                bg="white",
-                command=lambda: handle_click(b7, 7))
-    b8 = Button(root,
-                text=" ",
-                font=("Indie Flower", 40),
-                height=2,
-                width=7,
-                bg="white",
-                command=lambda: handle_click(b8, 8))
+    b0 = Button(
+        root,
+        text=" ",
+        font=("Indie Flower", 40),
+        height=2,
+        width=7,
+        bg="white",
+        command=lambda: handle_click(b0, 0),
+    )
+    b1 = Button(
+        root,
+        text=" ",
+        font=("Indie Flower", 40),
+        height=2,
+        width=7,
+        bg="white",
+        command=lambda: handle_click(b1, 1),
+    )
+    b2 = Button(
+        root,
+        text=" ",
+        font=("Indie Flower", 40),
+        height=2,
+        width=7,
+        bg="white",
+        command=lambda: handle_click(b2, 2),
+    )
+    b3 = Button(
+        root,
+        text=" ",
+        font=("Indie Flower", 40),
+        height=2,
+        width=7,
+        bg="white",
+        command=lambda: handle_click(b3, 3),
+    )
+    b4 = Button(
+        root,
+        text=" ",
+        font=("Indie Flower", 40),
+        height=2,
+        width=7,
+        bg="white",
+        command=lambda: handle_click(b4, 4),
+    )
+    b5 = Button(
+        root,
+        text=" ",
+        font=("Indie Flower", 40),
+        height=2,
+        width=7,
+        bg="white",
+        command=lambda: handle_click(b5, 5),
+    )
+    b6 = Button(
+        root,
+        text=" ",
+        font=("Indie Flower", 40),
+        height=2,
+        width=7,
+        bg="white",
+        command=lambda: handle_click(b6, 6),
+    )
+    b7 = Button(
+        root,
+        text=" ",
+        font=("Indie Flower", 40),
+        height=2,
+        width=7,
+        bg="white",
+        command=lambda: handle_click(b7, 7),
+    )
+    b8 = Button(
+        root,
+        text=" ",
+        font=("Indie Flower", 40),
+        height=2,
+        width=7,
+        bg="white",
+        command=lambda: handle_click(b8, 8),
+    )
 
     buttons = [b0, b1, b2, b3, b4, b5, b6, b7, b8]
 

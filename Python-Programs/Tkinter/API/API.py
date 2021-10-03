@@ -1,10 +1,10 @@
+import json
+from io import BytesIO
 from tkinter import *
 from tkinter import messagebox
-from PIL import Image, ImageTk
-from io import BytesIO
 
-import json
 import requests
+from PIL import Image, ImageTk
 
 root = Tk()
 # root.iconbitmap("D:\\Projects\\Python\\Tkinter\\api\\github.ico")
@@ -20,12 +20,12 @@ def get_data(name):
         api = json.loads(api_request.content)
 
         data = {
-            "user_name": api['login'],
-            "full_name": api['name'],
-            "image": api['avatar_url'],
-            "repo_num": api['public_repos'],
-            "followers": api['followers'],
-            "following": api['following'],
+            "user_name": api["login"],
+            "full_name": api["name"],
+            "image": api["avatar_url"],
+            "repo_num": api["public_repos"],
+            "followers": api["followers"],
+            "following": api["following"],
         }
         error = None
 
@@ -35,7 +35,7 @@ def get_data(name):
         print(e)
 
     if error != None:
-        messagebox.showerror("Error", error['message'])
+        messagebox.showerror("Error", error["message"])
     else:
         display_data(data)
 
@@ -44,11 +44,10 @@ def display_data(data):
     global img
 
     try:
-        url = data['image']
+        url = data["image"]
         response = requests.get(url)
         img_data = response.content
-        img = ImageTk.PhotoImage(
-            Image.open(BytesIO(img_data)).resize((200, 200)))
+        img = ImageTk.PhotoImage(Image.open(BytesIO(img_data)).resize((200, 200)))
         user_img = Label(root, image=img)
     except Exception as e:
         print(e)
@@ -68,13 +67,12 @@ def display_data(data):
     following.grid(row=7, column=0, columnspan=3)
 
 
-username_label = Label(root, text="Enter GitHub Username").grid(row=0,
-                                                                column=0)
+username_label = Label(root, text="Enter GitHub Username").grid(row=0, column=0)
 username_entry = Entry(root, width=50)
 username_entry.grid(row=0, column=1, padx=10)
 
-Button(root,
-       text="Submit Name",
-       command=lambda: get_data(username_entry.get())).grid(row=0, column=2)
+Button(root, text="Submit Name", command=lambda: get_data(username_entry.get())).grid(
+    row=0, column=2
+)
 
 root.mainloop()

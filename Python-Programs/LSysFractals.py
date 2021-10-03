@@ -18,7 +18,6 @@ def create_l_system(iters, axiom, rules):
     return starting_axiom
 
 
-
 def draw_l_systems(t, instructions, distance, angle):
     for letter in instructions:
         if letter == "F":
@@ -27,8 +26,8 @@ def draw_l_systems(t, instructions, distance, angle):
             t.right(angle)
         elif letter == "-":
             t.left(angle)
-                
-               
+
+
 def fractal(iterations, axiom, rules, angle, length, x_offset, y_offset):
 
     instructions = create_l_system(iterations, axiom, rules)
@@ -48,13 +47,13 @@ def fractal(iterations, axiom, rules, angle, length, x_offset, y_offset):
     t.hideturtle()
     wn.exitonclick()
 
+
 if __name__ == "__main__":
     # Quadratic SnowFlake
-    #fractal(4, "F--F", {"F":"F-F+F+F-F"}, 90, 5, 200, 0)
+    # fractal(4, "F--F", {"F":"F-F+F+F-F"}, 90, 5, 200, 0)
 
     # Koch-Snowflake
-    fractal(3, "F--F--F", {"F":"F+F--F+F"}, 60, 3, 100, 100)
+    fractal(3, "F--F--F", {"F": "F+F--F+F"}, 60, 3, 100, 100)
 
     # Quadratic-Koch-Island
-    #fractal(2, "F+F+F+F", {"F":"F-F+F+FFF-F-F+F"}, 90, 5, 100, -100)
-
+    # fractal(2, "F+F+F+F", {"F":"F-F+F+FFF-F-F+F"}, 90, 5, 100, -100)

@@ -1,5 +1,6 @@
-import sys
 import math
+import sys
+
 
 def cont():
   print("Do you want to continue ")

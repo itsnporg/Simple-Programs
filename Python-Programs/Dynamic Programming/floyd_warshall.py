@@ -5,14 +5,14 @@ V = 4
 
 # Define infinity as the large enough value. This value will be
 # used for vertices not connected to each other
-INF = float('inf')
+INF = float("inf")
 
 # Solves all pair shortest path via Floyd Warshall Algorithm
 
 
 def floydWarshall(graph):
-    """ dist[][] will be the output matrix that will finally 
-            have the shortest distances between every pair of vertices """
+    """dist[][] will be the output matrix that will finally
+    have the shortest distances between every pair of vertices"""
     """ initializing the solution matrix same as input graph matrix 
 	OR we can say that the initial values of shortest distances 
 	are based on shortest paths considering no 
@@ -40,23 +40,23 @@ def floydWarshall(graph):
 
                 # If vertex k is on the shortest path from
                 # i to j, then update the value of dist[i][j]
-                dist[i][j] = min(dist[i][j],
-                                 dist[i][k] + dist[k][j]
-                                 )
+                dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
     printSolution(dist)
 
 
 # A utility function to print the solution
 def printSolution(dist):
-    print("Following matrix shows the shortest distances\
-between every pair of vertices")
+    print(
+        "Following matrix shows the shortest distances\
+between every pair of vertices"
+    )
     for i in range(V):
         for j in range(V):
-            if(dist[i][j] == INF):
+            if dist[i][j] == INF:
                 print("%7s" % ("INF")),
             else:
                 print("%7d\t" % (dist[i][j])),
-            if j == V-1:
+            if j == V - 1:
                 print("")
 
 
@@ -71,10 +71,6 @@ between every pair of vertices")
 	\|/		 | 
 	(1)------->(2) 
 			3		 """
-graph = [[0, 5, INF, 10],
-         [INF, 0, 3, INF],
-         [INF, INF, 0, 1],
-         [INF, INF, INF, 0]
-         ]
+graph = [[0, 5, INF, 10], [INF, 0, 3, INF], [INF, INF, 0, 1], [INF, INF, INF, 0]]
 # Print the solution
 floydWarshall(graph)

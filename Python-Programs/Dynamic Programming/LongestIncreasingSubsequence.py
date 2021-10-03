@@ -8,13 +8,13 @@ def lis(arr):
 
     # Declare the list (array) for LIS and
     # initialize LIS values for all indexes
-    lis = [1]*n
+    lis = [1] * n
 
     # Compute optimized LIS values in bottom up manner
     for i in range(1, n):
         for j in range(0, i):
             if arr[i] > arr[j] and lis[i] < lis[j] + 1:
-                lis[i] = lis[j]+1
+                lis[i] = lis[j] + 1
 
     # Initialize maximum to 0 to get
     # the maximum of all LIS
@@ -25,6 +25,8 @@ def lis(arr):
         maximum = max(maximum, lis[i])
 
     return maximum
+
+
 # end of lis function
 
 
