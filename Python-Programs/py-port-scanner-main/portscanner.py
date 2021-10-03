@@ -1,10 +1,11 @@
 #!/bin/python3
 
 import argparse
-import time
-import socket
-import header
 import re
+import socket
+import time
+
+import header
 
 # Arguement Parsing for CLI
 parser = argparse.ArgumentParser(description="A Simple Network port scanner.")

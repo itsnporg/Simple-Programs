@@ -1,9 +1,10 @@
 #! /usr/local/bin/python
 
-import requests
 import argparse
-from os import getcwd, path
 import re
+from os import getcwd, path
+
+import requests
 
 # script to get placeholder image from via.placeholder.com api
 # by taking input from user via argparse

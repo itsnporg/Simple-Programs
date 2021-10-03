@@ -3,10 +3,10 @@
 # each level can correct up to 7, 15, 25, or 30 percent of the data respectively
 # Versions are any integer between 1 and 40. Where version 1 is the smallest QR code, and version 40 is the largest.
 
-import discord
-from discord.ext import commands
 import pyqrcode
 
+import discord
+from discord.ext import commands
 
 client = commands.Bot(command_prefix="?", help_command=None)
 

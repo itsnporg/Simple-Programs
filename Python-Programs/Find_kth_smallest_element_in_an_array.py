@@ -1,5 +1,5 @@
-from heapq import *
 import heapq
+from heapq import *
 
 
 def find_kth_smallest(A, k):

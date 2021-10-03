@@ -1,9 +1,9 @@
 #!/bin/python3
 
 import itertools
+import sys
 import threading
 import time
-import sys
 
 done = False
 # here is the animation

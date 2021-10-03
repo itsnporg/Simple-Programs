@@ -1,9 +1,9 @@
-from PIL import Image
 import binascii
-import optparse
 import codecs
-from bitstring import BitArray
+import optparse
 
+from bitstring import BitArray
+from PIL import Image
 
 success = "\33[92m"
 failure = "\33[91m"

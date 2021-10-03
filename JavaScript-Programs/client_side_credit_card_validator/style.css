@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
+*:focus:not(:focus-visible) {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fafafa;
+  line-height: 1;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+.heading-primary,
+.heading-secondary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  text-align: center;
+  margin-top: 6.2rem;
+  margin-bottom: 4.8rem;
+}
+
+.form-container {
+  padding: 3.2rem 4.8rem;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  box-shadow: 0 0.4rem 4.8rem rgba(0, 0, 0, 0.07),
+    0 -0.4rem 4.8rem rgba(0, 0, 0, 0.07);
+
+  border-radius: 11px;
+  margin-bottom: 5rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.form-container .heading-secondary {
+  color: #45260a;
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.form-validate {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.6rem;
+}
+
+.form-validate input {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-validate input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+.btn {
+  display: inline-block;
+
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+
+  width: 100%;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #fff;
+  color: #45260a;
+}
+
+footer {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #555;
+}
+
+#popupdiv {
+  padding-top: 2.4rem;
+  padding-bottom: 1.6rem !important;
+}
+
+#closepopup {
+  top: 30px !important;
+}
+
+#pop_heading,
+#pop_head_content {
+  font-family: sans-serif;
+  font-size: 2.4rem !important;
+}
+
+#btn-yes {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+
+#btn-no {
+  font-family: sans-serif;
+  font-size: 1.8rem;
+}
+
+.hidden-el {
+  display: none;
+}
+
+#loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #943f3f;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+#loader:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #38d83d;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+#loader:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #ff00ff;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 34em) {
+  .form-validate {
+    grid-template-columns: 1fr;
+  }
+}

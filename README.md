@@ -22,4 +22,4 @@ Here is a list of things you can contribute by making pull requests on this repo
 - Spam Pull Requests will not be accepted. Spam includes making small changes on README.md and other files. _You need to make a legit pull request in order for it to be accepted!_
 - Pre-Existing programs can be refactored and made a pull request but if a program already exists in the repo, donot make another pull request for the same program.
 
-Happy Open Source!
+Happy Open Source!!

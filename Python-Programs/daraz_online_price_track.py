@@ -1,7 +1,8 @@
-import time
-from selenium import webdriver
-from bs4 import BeautifulSoup
 import smtplib
+import time
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
 
 required_price = input("Price: ")
 product_url = input("Url: ")

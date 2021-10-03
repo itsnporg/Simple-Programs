@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO APP</title>
+    <style>
+      .done {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="todo-container">
+      <form method="POST" action="/addTodo">
+        <input type="text" name="title" />
+        <button type="submit">Add</button>
+      </form>
+
+      <table border="1">
+        <thead>
+          <th>Tittle</th>
+          <th>Action</th>
+        </thead>
+        <tbody>
+          {{range $key, $value := .}}
+          <tr>
+            <td>
+              <form
+                method="POST"
+                action="/completeTodo?Id={{$value.ID}}"
+                id="formSubmit"
+              >
+                {{if $value.Done}}
+                <input
+                  type="checkbox"
+                  name="complete"
+                  checked
+                  onchange="this.form.submit()"
+                />
+                {{else}}
+                <input
+                  type="checkbox"
+                  name="complete"
+                  onchange="this.form.submit()"
+                />
+                {{end}}
+              </form>
+
+              {{if $value.Done}}
+              <span class="done">{{$value.Title}}</span>
+              {{else}}
+              <span>{{$value.Title}}</span>
+              {{end}}
+            </td>
+
+            <td>
+              <form method="POST" action="/deleteTodo?Id={{$value.ID}}">
+                <button type="submit">Delete</button>
+              </form>
+            </td>
+          </tr>
+          {{end}}
+        </tbody>
+      </table>
+    </div>
+    <script></script>
+  </body>
+</html>
