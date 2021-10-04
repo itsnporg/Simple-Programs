@@ -1,0 +1,5 @@
+pandas==1.2.4
+bs4==0.0.1
+colorama==0.4.4
+requests==2.25.1
+
