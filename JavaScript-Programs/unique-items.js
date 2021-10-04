@@ -1,5 +1,5 @@
-const fruits = ['apple', 'banana', 'orange', 'banana']
+const fruits = ["apple", "banana", "orange", "banana"];
 
-const getUniqueItemsInArray = (arr) => [...new Set(fruits)]
+const getUniqueItemsInArray = (arr) => [...new Set(fruits)];
 
-const uniqueFruits = getUniqueItemsInArray(fruits)
+const uniqueFruits = getUniqueItemsInArray(fruits);

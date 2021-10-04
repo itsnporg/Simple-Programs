@@ -1,13 +1,14 @@
-import discord
-import urllib.request
-import string
 import random
-from PIL import Image
+import string
+import urllib.request
+
 from dotenv import load_dotenv
+from PIL import Image
+
+import discord
 
 load_dotenv(".env")
 import os
-
 
 client = discord.Client()
 token = os.environ["TOKEN"]

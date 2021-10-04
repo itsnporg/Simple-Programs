@@ -46,6 +46,8 @@ cmds = commands.parse_args()
 
 
 """This Functions Downloading file detecting filename from direct file Urls"""
+
+
 def download_images(direct_img_url):
     file_content = requests.get(direct_img_url)
     file_name = wget.detect_filename(url=direct_img_url)

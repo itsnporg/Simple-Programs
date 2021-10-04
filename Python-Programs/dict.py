@@ -1,9 +1,6 @@
 # Python program demonstrating the use of dictionary
 
-person = {
-    "name": "Smriti",
-    "github": "smritineupane"
-}
+person = {"name": "Smriti", "github": "smritineupane"}
 
 for k, v in person.items():
     print("Name:", k)

@@ -1,8 +1,8 @@
 import os
-
 import shutil
 
 file_dict = {}
+
 
 def prettify(folder_path):
 
@@ -28,7 +28,7 @@ def prettify(folder_path):
 
             try:
 
-                path = os.path.join(folder_path, value.strip('.').upper())
+                path = os.path.join(folder_path, value.strip(".").upper())
 
                 os.mkdir(path)
 
@@ -38,21 +38,28 @@ def prettify(folder_path):
 
         for key, value in file_dict.items():
 
-            shutil.move(folder_path + "\\" + key + value,
-
-                        os.path.join(folder_path, value.strip('.').upper() + "\\" + key + value))
+            shutil.move(
+                folder_path + "\\" + key + value,
+                os.path.join(
+                    folder_path, value.strip(".").upper() + "\\" + key + value
+                ),
+            )
 
         print("\nPrettification Successful!!")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
 
     print("***************************************\n")
 
-    print("█▀▀ █▀█ █░░ █▀▄ █▀▀ █▀█   █▀█ █▀█ █▀▀ ▀█▀ ▀█▀ █ █▀▀ █ █▀▀ █▀█\n"
+    print(
+        "█▀▀ █▀█ █░░ █▀▄ █▀▀ █▀█   █▀█ █▀█ █▀▀ ▀█▀ ▀█▀ █ █▀▀ █ █▀▀ █▀█\n"
+        "█▀░ █▄█ █▄▄ █▄▀ ██▄ █▀▄   █▀▀ █▀▄ ██▄ ░█░ ░█░ █ █▀░ █ ██▄ █▀▄"
+    )
 
-          "█▀░ █▄█ █▄▄ █▄▀ ██▄ █▀▄   █▀▀ █▀▄ ██▄ ░█░ ░█░ █ █▀░ █ ██▄ █▀▄")
-
-    print("\n***************************************           - Developed by Diwash007\n")
+    print(
+        "\n***************************************           - Developed by Diwash007\n"
+    )
 
     print("Note: Close the folder window before prettifying")
 

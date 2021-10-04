@@ -27,7 +27,7 @@ echo "div is =" $sum;;
 esac
 echo "Do you want to continue"
 read i
-if [ $i != "y" ]
+if [ ${i,,} != "y" ]
 then
 exit
 fi

@@ -1,5 +1,5 @@
-const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -13,13 +13,13 @@ module.exports = {
     ),
 
   async execute(interaction) {
-    const user = interaction.options.getUser("user") ?? interaction.user
-    const member = await interaction.guild.members.fetch(user.id)
+    const user = interaction.options.getUser("user") ?? interaction.user;
+    const member = await interaction.guild.members.fetch(user.id);
     const roles = member.roles.cache
       .sort((a, b) => b.position - a.position)
       .map((r) => r)
       .slice(0, -1)
-      .join(",")
+      .join(",");
 
     const permissions = member
       .permissionsIn(interaction.channel)
@@ -32,7 +32,7 @@ module.exports = {
           .map((m) => `${m.charAt().toUpperCase()}${m.slice(1).toLowerCase()}`)
           .join(" ")
       )
-      .join(", ")
+      .join(", ");
 
     const userEmbed = new MessageEmbed()
       .setColor(`${member.displayHexColor}`)
@@ -60,7 +60,7 @@ module.exports = {
 
         { name: "Permissions", value: permissions },
         { name: "Roles", value: roles }
-      )
-    await interaction.reply({ embeds: [userEmbed], ephemeral: true })
+      );
+    await interaction.reply({ embeds: [userEmbed], ephemeral: true });
   },
-}
+};
