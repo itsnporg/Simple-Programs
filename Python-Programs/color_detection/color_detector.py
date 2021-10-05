@@ -7,7 +7,6 @@ import cv2
 import numpy as np
 import pandas as pd
 
-
 # reading image with OpenCV
 img = cv2.imread("night.jpeg")
 

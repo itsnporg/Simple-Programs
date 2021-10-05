@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer src="js/script.js"></script>
+
+    <title>Inter | Admin Panel</title>
+  </head>
+  <body>
+    <nav class="sidebar">
+      <button class="btn-mobile-nav btn-mobile-nav--inside">
+        <ion-icon name="close-outline" class="icon-mobile-nav"></ion-icon>
+      </button>
+      <a href="#!" class="logo-container"
+        ><img src="img/logo.svg" alt="Inter Logo" class="logo" />
+        <p class="logo-text">Inter</p></a
+      >
+      <div class="highlighted-item">
+        <ion-icon name="code-working-outline" class="highlighted-icon"></ion-icon>
+        <div class="highlighted-text-box">
+          <p class="highlighted-title">Projects</p>
+          <p class="highlighted-text">Workspace</p>
+        </div>
+        <p class="highlighted-switch-icon"><ion-icon name="chevron-down-outline"></ion-icon></p>
+      </div>
+      <ul class="sidebar-items">
+        <li class="sidebar-item sidebar-item-active">
+          <a href="#!" class="sidebar-link"
+            ><ion-icon name="speedometer-outline" class="sidebar-icon"></ion-icon
+            ><span class="sidebar-label">Dashboard</span></a
+          >
+        </li>
+        <li class="sidebar-item">
+          <a href="#!" class="sidebar-link"
+            ><ion-icon name="people-outline" class="sidebar-icon"></ion-icon
+            ><span class="sidebar-label">Community</span></a
+          >
+        </li>
+        <li class="sidebar-item">
+          <a href="#!" class="sidebar-link"
+            ><ion-icon name="bulb-outline" class="sidebar-icon"></ion-icon
+            ><span class="sidebar-label">Inspiration</span></a
+          >
+        </li>
+        <li class="sidebar-item">
+          <a href="#!" class="sidebar-link"
+            ><ion-icon name="chatbubbles-outline" class="sidebar-icon"></ion-icon
+            ><span class="sidebar-label">Dashboard</span></a
+          >
+        </li>
+        <li class="sidebar-item">
+          <a href="#!" class="sidebar-link"
+            ><ion-icon name="settings-outline" class="sidebar-icon"></ion-icon
+            ><span class="sidebar-label">Settings</span></a
+          >
+        </li>
+
+        <li class="seperator-text">Shortcuts</li>
+
+        <li class="sidebar-item">
+          <a href="#!" class="sidebar-link"
+            ><ion-icon name="scan-outline" class="sidebar-icon"></ion-icon><span class="sidebar-label">Scan</span></a
+          >
+        </li>
+        <li class="sidebar-item">
+          <a href="#!" class="sidebar-link"
+            ><ion-icon name="pencil-outline" class="sidebar-icon"></ion-icon><span class="sidebar-label">Draw</span></a
+          >
+        </li>
+        <li class="sidebar-item">
+          <a href="#!" class="sidebar-link"
+            ><ion-icon name="add-outline" class="sidebar-icon"></ion-icon
+            ><span class="sidebar-label">Add shortcut</span></a
+          >
+        </li>
+        <li class="new-project">
+          <button class="btn">
+            <ion-icon name="add-outline" class="btn-icon"></ion-icon>
+            <span>New Project</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <main class="main">
+      <div class="profile-content">
+        <button class="btn-mobile-nav">
+          <ion-icon name="menu-outline" class="icon-mobile-nav"></ion-icon>
+        </button>
+        <nav class="profile-nav">
+          <div class="profile-nav-item">
+            <a href="#!"><ion-icon name="search-outline" class="profile-nav-icon"></ion-icon></a>
+          </div>
+          <div class="profile-nav-item icon-item-end">
+            <div class="wrapper">
+              <span class="badge">3</span>
+            </div>
+            <a href="#!"><ion-icon name="notifications-outline" class="profile-nav-icon"></ion-icon></a>
+          </div>
+          <div class="profile-nav-item">
+            <a href="#!"><img src="img/customer-3.jpg" alt="Aayush Image" class="profile-nav-img" /></a>
+          </div>
+        </nav>
+      </div>
+
+      <h1 class="heading-primary">Hello Aayush</h1>
+      <p class="heading-text">Do you already know what you will design today? 😉</p>
+      <div class="cards">
+        <article class="card">
+          <nav class="card-nav">
+            <ul class="card-nav-items">
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="star-outline"></ion-icon></a>
+              </li>
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+              </li>
+            </ul>
+          </nav>
+          <img src="img/steve.jpg" alt="Steve" class="card-img-author" />
+          <p class="card-title">Friendly Painters</p>
+          <p class="card-text">Within the exercise, we design a room in a Scandinavian style.</p>
+          <ul class="overview-lists">
+            <li class="overview list icon-text-box">
+              <ion-icon name="apps-outline" class="overview-icon"></ion-icon> <span>Task: Practice</span>
+            </li>
+            <li class="overview list overview-list-more">
+              <div class="overview-date icon-text-box">
+                <ion-icon name="calendar-outline" class="overview-icon"></ion-icon> <span>Date: 01-07-2021</span>
+              </div>
+              <div class="overview-people">
+                <img src="img/customer-1.jpg" alt="People photo" />
+                <img src="img/customer-2.jpg" alt="People photo" />
+                <img src="img/customer-3.jpg" alt="People photo" />
+                <img src="img/customer-4.jpg" alt="People photo" />
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <nav class="card-nav">
+            <ul class="card-nav-items">
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="star-outline"></ion-icon></a>
+              </li>
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+              </li>
+            </ul>
+          </nav>
+          <img src="img/ben.jpg" alt="Steve" class="card-img-author" />
+          <p class="card-title">Ho, Ho, Ho!</p>
+          <p class="card-text">Christmas is coming! Will we try to prepare something for the ocasion?</p>
+          <ul class="overview-lists">
+            <li class="overview-list icon-text-box">
+              <ion-icon name="apps-outline" class="overview-icon"></ion-icon> <span>Task: Commerical Project!</span>
+            </li>
+            <li class="overview list overview-list-more">
+              <div class="overview-date icon-text-box">
+                <ion-icon name="calendar-outline" class="overview-icon"></ion-icon> <span>Date: 01-07-2021</span>
+              </div>
+              <div class="overview-people">
+                <img src="img/customer-1.jpg" alt="People photo" />
+                <img src="img/customer-3.jpg" alt="People photo" />
+                <img src="img/customer-4.jpg" alt="People photo" />
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <nav class="card-nav">
+            <ul class="card-nav-items">
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="star-outline"></ion-icon></a>
+              </li>
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+              </li>
+            </ul>
+          </nav>
+          <img src="img/hannah.jpg" alt="Hananah" class="card-img-author" />
+          <p class="card-title">Dressing room</p>
+          <p class="card-text">Wonderful news! Let's arrange the hosts and guest's dressing rooms!</p>
+          <ul class="overview-lists">
+            <li class="overview-list icon-text-box">
+              <ion-icon name="apps-outline" class="overview-icon"></ion-icon> <span>Task: Commerical Project!</span>
+            </li>
+            <li class="overview list overview-list-more">
+              <div class="overview-date icon-text-box">
+                <ion-icon name="calendar-outline" class="overview-icon"></ion-icon> <span>Date: 20-12-2021</span>
+              </div>
+              <div class="overview-people">
+                <img src="img/customer-1.jpg" alt="People photo" />
+                <img src="img/customer-3.jpg" alt="People photo" />
+                <img src="img/customer-4.jpg" alt="People photo" />
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <nav class="card-nav">
+            <ul class="card-nav-items">
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="star-outline"></ion-icon></a>
+              </li>
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+              </li>
+            </ul>
+          </nav>
+          <img src="img/dave.jpg" alt="Hananah" class="card-img-author" />
+          <p class="card-title">headhogs</p>
+          <p class="card-text">These cties will need a new place where they can live with their owner</p>
+          <ul class="overview-lists">
+            <li class="overview-list icon-text-box">
+              <ion-icon name="apps-outline" class="overview-icon"></ion-icon> <span>Task: Commerical Project!</span>
+            </li>
+            <li class="overview list overview-list-more">
+              <div class="overview-date icon-text-box">
+                <ion-icon name="calendar-outline" class="overview-icon"></ion-icon> <span>Date: 20-12-2020</span>
+              </div>
+              <div class="overview-people">
+                <img src="img/customer-6.jpg" alt="People photo" />
+                <img src="img/customer-5.jpg" alt="People photo" />
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <nav class="card-nav">
+            <ul class="card-nav-items">
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="star-outline"></ion-icon></a>
+              </li>
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+              </li>
+            </ul>
+          </nav>
+          <img src="img/customer-3.jpg" alt="Steve" class="card-img-author" />
+          <p class="card-title">Random</p>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt.</p>
+          <ul class="overview-lists">
+            <li class="overview list icon-text-box">
+              <ion-icon name="apps-outline" class="overview-icon"></ion-icon> <span>Task: Practice</span>
+            </li>
+            <li class="overview list overview-list-more">
+              <div class="overview-date icon-text-box">
+                <ion-icon name="calendar-outline" class="overview-icon"></ion-icon> <span>Date: 01-07-2021</span>
+              </div>
+              <div class="overview-people">
+                <img src="img/customer-6.jpg" alt="People photo" />
+                <img src="img/customer-4.jpg" alt="People photo" />
+                <img src="img/customer-5.jpg" alt="People photo" />
+                <img src="img/customer-2.jpg" alt="People photo" />
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <nav class="card-nav">
+            <ul class="card-nav-items">
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="star-outline"></ion-icon></a>
+              </li>
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+              </li>
+            </ul>
+          </nav>
+          <img src="img/steve.jpg" alt="Steve" class="card-img-author" />
+          <p class="card-title">Color Match</p>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde.</p>
+          <ul class="overview-lists">
+            <li class="overview-list icon-text-box">
+              <ion-icon name="apps-outline" class="overview-icon"></ion-icon> <span>Task: Commerical Project!</span>
+            </li>
+            <li class="overview list overview-list-more">
+              <div class="overview-date icon-text-box">
+                <ion-icon name="calendar-outline" class="overview-icon"></ion-icon> <span>Date: 01-07-2021</span>
+              </div>
+              <div class="overview-people">
+                <img src="img/customer-1.jpg" alt="People photo" />
+                <img src="img/customer-3.jpg" alt="People photo" />
+                <img src="img/customer-2.jpg" alt="People photo" />
+                <img src="img/customer-4.jpg" alt="People photo" />
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <nav class="card-nav">
+            <ul class="card-nav-items">
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="star-outline"></ion-icon></a>
+              </li>
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+              </li>
+            </ul>
+          </nav>
+          <img src="img/customer-5.jpg" alt="Hananah" class="card-img-author" />
+          <p class="card-title">Dumb Stuff</p>
+          <p class="card-text">Wonderful news! Let's arrange the hosts and guest's dressing rooms!</p>
+          <ul class="overview-lists">
+            <li class="overview-list icon-text-box">
+              <ion-icon name="apps-outline" class="overview-icon"></ion-icon> <span>Task: Commerical Project!</span>
+            </li>
+            <li class="overview list overview-list-more">
+              <div class="overview-date icon-text-box">
+                <ion-icon name="calendar-outline" class="overview-icon"></ion-icon> <span>Date: 20-12-2021</span>
+              </div>
+              <div class="overview-people">
+                <img src="img/customer-3.jpg" alt="People photo" />
+                <img src="img/customer-4.jpg" alt="People photo" />
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <nav class="card-nav">
+            <ul class="card-nav-items">
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="star-outline"></ion-icon></a>
+              </li>
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+              </li>
+            </ul>
+          </nav>
+          <img src="img/customer-4.jpg" alt="Hananah" class="card-img-author" />
+          <p class="card-title">Cool Cards</p>
+          <p class="card-text">These are all cool cards</p>
+          <ul class="overview-lists">
+            <li class="overview-list icon-text-box">
+              <ion-icon name="apps-outline" class="overview-icon"></ion-icon> <span>Task: Something</span>
+            </li>
+            <li class="overview list overview-list-more">
+              <div class="overview-date icon-text-box">
+                <ion-icon name="calendar-outline" class="overview-icon"></ion-icon> <span>Date: 20-12-2020</span>
+              </div>
+              <div class="overview-people">
+                <img src="img/customer-1.jpg" alt="People photo" />
+                <img src="img/customer-6.jpg" alt="People photo" />
+                <img src="img/customer-5.jpg" alt="People photo" />
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <nav class="card-nav">
+            <ul class="card-nav-items">
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="star-outline"></ion-icon></a>
+              </li>
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+              </li>
+            </ul>
+          </nav>
+          <img src="img/steve.jpg" alt="Steve" class="card-img-author" />
+          <p class="card-title">Friendly Painters</p>
+          <p class="card-text">Within the exercise, we design a room in a Scandinavian style.</p>
+          <ul class="overview-lists">
+            <li class="overview list icon-text-box">
+              <ion-icon name="apps-outline" class="overview-icon"></ion-icon> <span>Task: Practice</span>
+            </li>
+            <li class="overview list overview-list-more">
+              <div class="overview-date icon-text-box">
+                <ion-icon name="calendar-outline" class="overview-icon"></ion-icon> <span>Date: 01-07-2021</span>
+              </div>
+              <div class="overview-people">
+                <img src="img/customer-1.jpg" alt="People photo" />
+                <img src="img/customer-2.jpg" alt="People photo" />
+                <img src="img/customer-3.jpg" alt="People photo" />
+                <img src="img/customer-4.jpg" alt="People photo" />
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <nav class="card-nav">
+            <ul class="card-nav-items">
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="star-outline"></ion-icon></a>
+              </li>
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+              </li>
+            </ul>
+          </nav>
+          <img src="img/ben.jpg" alt="Steve" class="card-img-author" />
+          <p class="card-title">Ho, Ho, Ho!</p>
+          <p class="card-text">Christmas is coming! Will we try to prepare something for the ocasion?</p>
+          <ul class="overview-lists">
+            <li class="overview-list icon-text-box">
+              <ion-icon name="apps-outline" class="overview-icon"></ion-icon> <span>Task: Commerical Project!</span>
+            </li>
+            <li class="overview list overview-list-more">
+              <div class="overview-date icon-text-box">
+                <ion-icon name="calendar-outline" class="overview-icon"></ion-icon> <span>Date: 01-07-2021</span>
+              </div>
+              <div class="overview-people">
+                <img src="img/customer-1.jpg" alt="People photo" />
+                <img src="img/customer-3.jpg" alt="People photo" />
+                <img src="img/customer-4.jpg" alt="People photo" />
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <nav class="card-nav">
+            <ul class="card-nav-items">
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="star-outline"></ion-icon></a>
+              </li>
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+              </li>
+            </ul>
+          </nav>
+          <img src="img/hannah.jpg" alt="Hananah" class="card-img-author" />
+          <p class="card-title">Dressing room</p>
+          <p class="card-text">Wonderful news! Let's arrange the hosts and guest's dressing rooms!</p>
+          <ul class="overview-lists">
+            <li class="overview-list icon-text-box">
+              <ion-icon name="apps-outline" class="overview-icon"></ion-icon> <span>Task: Commerical Project!</span>
+            </li>
+            <li class="overview list overview-list-more">
+              <div class="overview-date icon-text-box">
+                <ion-icon name="calendar-outline" class="overview-icon"></ion-icon> <span>Date: 20-12-2021</span>
+              </div>
+              <div class="overview-people">
+                <img src="img/customer-1.jpg" alt="People photo" />
+                <img src="img/customer-3.jpg" alt="People photo" />
+                <img src="img/customer-4.jpg" alt="People photo" />
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="card">
+          <nav class="card-nav">
+            <ul class="card-nav-items">
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="star-outline"></ion-icon></a>
+              </li>
+              <li class="card-nav-item">
+                <a href="#!"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+              </li>
+            </ul>
+          </nav>
+          <img src="img/customer-3.jpg" alt="Hananah" class="card-img-author" />
+          <p class="card-title">eCommerce</p>
+          <p class="card-text">These cties will need a new place where they can live with their owner</p>
+          <ul class="overview-lists">
+            <li class="overview-list icon-text-box">
+              <ion-icon name="apps-outline" class="overview-icon"></ion-icon> <span>Task: Commerical Project!</span>
+            </li>
+            <li class="overview list overview-list-more">
+              <div class="overview-date icon-text-box">
+                <ion-icon name="calendar-outline" class="overview-icon"></ion-icon> <span>Date: 20-12-2020</span>
+              </div>
+              <div class="overview-people">
+                <img src="img/customer-6.jpg" alt="People photo" />
+                <img src="img/customer-5.jpg" alt="People photo" />
+                <img src="img/customer-1.jpg" alt="People photo" />
+              </div>
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="footer">
+        <p>Mady By <a href="https://www.instagram.com/aayushkumarkarna/" target="_blank">Aayush Karna</a>.</p>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,11 +1,13 @@
-import discord
-import os
-import requests
 import json
+import os
 import random
-from keep_alive import keep_alive
 import string
+
+import requests
+from keep_alive import keep_alive
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
+import discord
 
 client = discord.Client()
 

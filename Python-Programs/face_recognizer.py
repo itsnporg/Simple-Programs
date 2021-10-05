@@ -1,18 +1,19 @@
 # importing libraries
-import tkinter as tk
-from tkinter import Message, Text
-import cv2
+import csv
+import datetime
 import os
 import shutil
-import csv
-import numpy as np
-from PIL import Image, ImageTk
-import pandas as pd
-import datetime
 import time
-import tkinter.ttk as ttk
+import tkinter as tk
 import tkinter.font as font
+import tkinter.ttk as ttk
 from pathlib import Path
+from tkinter import Message, Text
+
+import cv2
+import numpy as np
+import pandas as pd
+from PIL import Image, ImageTk
 
 window = tk.Tk()
 window.title("Face_Recogniser")

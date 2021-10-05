@@ -1,0 +1,125 @@
+.TH "NXPRAYER" "1" "2021 Oct 2" nxprayer-0.1.1
+
+.SH NAME
+nxprayer \- Next Islamic prayer.
+
+.SH SYNOPSIS
+.B nxprayer
+.RB [ \-h ]
+.nf
+.fi
+.B nxprayer
+.RB [ \-n ]
+.nf
+.fi
+.B nxprayer
+.RB [ \-r ]
+.nf
+.fi
+.B nxprayer
+.RB [ \-d ]
+
+.SH DESCRIBTION
+.B
+nxprayer
+displays the time of the next prayer.
+
+.SH OPTIONS
+.TP
+.BR \-h ", " \-\-help
+display this help information.
+.TP
+.BR \-n ", " \-\-next
+display the time of the next prayer.
+.TP
+.BR \-r ", " \-\-remain
+display the remaining time till the next prayer.
+.TP
+.BR \-d ", " \-\-adhan
+display if it's the time for adhan by returning binary value(0, 1).
+
+.SH
+FILES
+.TP
+.I /tmp/nxprayer
+The cached data that is used by the executable file.
+.TP
+.I /usr/local/bin/nxprayer
+The executable file.
+.TP
+.I ~/.config/nxprayer/params.json
+Here is an example of what the config file look like.
+.nf
+{
+.nf
+	\fB"latitude"\fR:"24.494142697334386",
+.nf
+	\fB"longitude"\fR:"32.869780209307066",
+.nf
+	\fB"method"\fR:"5",
+.nf
+	\fB"month"\fR:"1",
+.nf
+	\fB"adjustment"\fR:"1",
+.nf
+	\fB"annual"\fR:"true",
+.nf
+	\fB"year"\fR:"2021"
+.nf
+}
+
+.I parameters:
+.B "latitude" \fR(decimal)
+The decimal value for the latitude co-ordinate of the location you want the time computed for. Example: 51.75865125
+If not specified, it defaults to \fICairo.
+
+.B "longitude" \fR(decimal)
+The decimal value for the longitude co-ordinate of the location you want the time computed for. Example: -1.25387785
+If not specified, it defaults to \fICairo.
+
+.B "month" \fR(number)
+A gregorian calendar month. Example: 8 or 08 for August.
+
+.B "year" \fR(number)
+A gregorian calendar year. Example: 2014.
+If not specified, it defaults to \fI2021.
+
+.B "annual" \fR(boolean)
+If true, we'll ignore the month and return the calendar for the whole year.
+
+.B "method" \fR(number)
+A prayer times calculation method. Methods identify various schools of thought about how to compute the timings.
+If not specified, it defaults to \fI5 - Egyptian General Authority of Survey.
+\fRThis parameter accepts values from 0-12 and 99, as specified below:
+
+0 - Shia Ithna-Ansari
+1 - University of Islamic Sciences, Karachi
+2 - Islamic Society of North America
+3 - Muslim World League
+4 - Umm Al-Qura University, Makkah
+5 - Egyptian General Authority of Survey
+7 - Institute of Geophysics, University of Tehran
+8 - Gulf Region
+9 - Kuwait
+10 - Qatar
+11 - Majlis Ugama Islam Singapura, Singapore
+12 - Union Organization islamic de France
+13 - Diyanet İşleri Başkanlığı, Turkey
+14 - Spiritual Administration of Muslims of Russia
+15 - Moonsighting Committee Worldwide (also requires shafaq paramteer)
+99 - Custom. See https://aladhan.com/calculation-methods
+
+.B "adjustment" \fR(number)
+Number of days to adjust hijri date(s). Example: 1 or 2 or -1 or -2
+
+.SH CUSTOMIZATION
+nxprayer can be customized by creating a custom \fI~/.config/nxprayer/params.json \fRand (re)run the \fI'remote_api.py'.
+
+.SH AUTHOR
+Abd El-Twab M. Fakhry <abdeltwab.m.fakhry@gmail.com>
+
+.SH LICENSE
+See the LICENSE file for the terms of redistribution.
+
+.SH BUGS
+Consider reporting bugs via opening an issue on github.

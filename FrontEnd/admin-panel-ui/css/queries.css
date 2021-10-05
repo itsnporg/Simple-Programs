@@ -1,0 +1,100 @@
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    display: block;
+    overflow-y: auto;
+  }
+
+  .main {
+    overflow-y: hidden;
+  }
+
+  .profile-content {
+    margin-bottom: 3.2rem;
+  }
+
+  .logo-container {
+    margin-bottom: 1.8rem;
+  }
+
+  .highlighted-item {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    margin-right: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .seperator-text {
+    padding: 1.2rem 0 1.4rem 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  /* implement mobile nav */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 15px rgb(0 0 0 / 75%);
+    clip-path: inset(0px -15px 0px 0px);
+    transform: translateX(-100%);
+    z-index: 999999;
+    background-color: #fff;
+    height: 100vh;
+    transition: opacity 0.4s ease-in, transform 0.4s ease-in, visibility 0.4s ease-in;
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it fro, screen readers */
+    visibility: hidden;
+    overflow-x: hidden;
+  }
+
+  .new-project {
+    margin-top: 1.4rem;
+  }
+
+  .nav-open .sidebar {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name='close-outline'] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name='menu-outline'] {
+    display: none;
+  }
+}
+
+@media (max-width: 34em) {
+  .form-validate {
+    grid-template-columns: 1fr;
+  }
+
+  .new-project {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
+}
