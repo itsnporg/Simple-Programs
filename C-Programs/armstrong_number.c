@@ -1,7 +1,7 @@
-//Armstrong number means the sum of all digits 
-// e.g for 125=1^3+2^3+5^3=134
 #include<stdio.h>
 #include<math.h>
+//Armstrong number means the sum of all digits 
+// e.g for 125=1^3+2^3+5^3=134
 int main(){
     int num;
     printf("Enter a number: ");
