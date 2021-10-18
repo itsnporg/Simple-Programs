@@ -9,16 +9,16 @@ int main(void)
     char a[100];
     char b[100];
     int l = 0;
-
+    int i;
     printf("Enter the string to reverse : ");
     gets(a);
-    for (int i = 0; a[i] != '\0'; i++)
+    for (i = 0; a[i] != '\0'; i++)
     {
         l++;
     }
 
     int count = l - 1;
-    for (int i = 0; i <= l - 1; i++)
+    for (i = 0; i <= l - 1; i++)
     {
         b[count] = a[i];
         count--;
