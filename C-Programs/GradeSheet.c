@@ -20,40 +20,40 @@ int main(){
     }
 
     for(a=0;a<n;a++){
-        if(marks[a]>90){
+        if(marks[a]>=90){
             strcpy(grade[a],"A+");
             gpa[a] = 4;
         }
-        else if(marks[a]<90 && marks[a]>80){
+        else if(marks[a]<90 && marks[a]>=80){
             strcpy(grade[a], "A");
             gpa[a]= 3.6;
         }
-        else if(marks[a] < 80 && marks[a] > 70)
+        else if(marks[a] < 80 && marks[a] >= 70)
         {
             strcpy(grade[a], "B+");
             gpa[a] = 3.2;
         }
-        else if (marks[a] < 70 && marks[a] > 60)
+        else if (marks[a] < 70 && marks[a] >= 60)
         {
             strcpy(grade[a], "B");
             gpa[a] = 2.8;
         }
-        else if (marks[a] < 60 && marks[a] > 50)
+        else if (marks[a] < 60 && marks[a] >= 50)
         {
             strcpy(grade[a], "C+");
             gpa[a] = 2.4;
         }
-        else if (marks[a] < 50 && marks[a] > 40)
+        else if (marks[a] < 50 && marks[a] >= 40)
         {
             strcpy(grade[a], "C");
             gpa[a] = 2.0;
         }
-        else if (marks[a] < 20 && marks[a] > 40)
+        else if (marks[a] < 40 && marks[a] >= 20)
         {
             strcpy(grade[a], "D");
             gpa[a] = 1.6;
         }
-        else if (marks[a] < 1 && marks[a] > 20)
+        else if (marks[a] <20)
         {
             strcpy(grade[a], "E");
             gpa[a] = 0.8;
@@ -74,31 +74,31 @@ int main(){
 
     for (a = 0; a < n; a++)
     {
-        if (avgGpa > 3.6)
+        if (avgGpa >= 3.6)
         {
             strcpy(finalGrade, "A+");
         }
-        else if (avgGpa < 3.6 && avgGpa > 3.2)
+        else if (avgGpa < 3.6 && avgGpa >= 3.2)
         {
             strcpy(finalGrade, "A");
         }
-        else if (avgGpa < 3.2 && avgGpa > 2.8)
+        else if (avgGpa < 3.2 && avgGpa >= 2.8)
         {
             strcpy(finalGrade, "B+");
         }
-        else if (avgGpa < 2.8 && avgGpa > 2.4)
+        else if (avgGpa < 2.8 && avgGpa >= 2.4)
         {
             strcpy(finalGrade, "B");
         }
-        else if (avgGpa < 2.0 && avgGpa > 1.6)
+        else if (avgGpa < 2.0 && avgGpa >= 1.6)
         {
             strcpy(finalGrade, "C+");
         }
-        else if (avgGpa < 1.6 && avgGpa > 0.8)
+        else if (avgGpa < 1.6 && avgGpa >= 0.8)
         {
             strcpy(finalGrade, "C");
         }
-        else if (avgGpa < 0.8 && avgGpa > 0)
+        else if (avgGpa < 0.8)
         {
             strcpy(finalGrade, "D");
         }
