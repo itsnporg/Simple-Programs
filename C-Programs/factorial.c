@@ -1,18 +1,17 @@
+#include <stdio.h>
 
-#include <iostream>
-using namespace std;
 int main()
 {
   int i,fac=1,num;
-  cout<<"Enter a number to calculate factorial";
-  cin>>num;
+  printf("Enter a number to calculate factorial");
+  scanf("%d",&num);
 
     for(i=1;i<=num;i++)
     {
       fac=fac*i;
     }
 
-   cout<<"Factorial of " <<num<< "is:" <<fac<<endl;
+   printf("Factorial of %d is: %d",num ,fac);
 
   return 0;
 }
