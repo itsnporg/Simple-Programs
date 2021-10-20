@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700');
+
+body{
+  font-family: Montserrat, sans-serif;
+}
+
+.folder {
+  float: left;
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0);
+  transition: 0.2s background-color ease-out;
+  text-align: center;
+  cursor: pointer;
+}
+.folder i.fa-folder {
+  height: 90px !important;
+  width: 100% !important;
+  line-height: 100px !important;
+  margin: 10px auto !important;
+  font-size: 90px !important;
+  transition: 0.2s all ease-out;
+}
+.folder i.fa-check {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 34px;
+  margin: auto;
+  pointer-events: none;
+  transform: scale(0);
+  opacity: 0;
+  font-size: 24px;
+}
+
+.folder p {
+  cursor: default;
+  opacity: 0.5;
+  transition: 0.2s all ease-out;
+}
+.folder:hover .fa-folder {
+  transform: scale(1.1) !important;
+}
+.folder:hover p {
+  transform: translateY(6px);
+  opacity: 1;
+}
+#folder1 i.fa-folder,
+#folder1-content h2 .fa-folder {
+  color: #eb4141 !important;
+}
+#folder2 i.fa-folder,
+#folder2-content h2 .fa-folder {
+  color: #4bc97a;
+}
+#folder3 i.fa-folder,
+#folder3-content h2 .fa-folder {
+  color: #6fdbeb;
+}
+#folder4 i.fa-folder,
+#folder4-content h2 .fa-folder {
+  color: #eeca4e;
+}
+#folder5 i.fa-folder,
+#folder5-content h2 .fa-folder {
+  color: #5b5b5b;
+}
+

@@ -1,0 +1,39 @@
+Step 1: Understand the question
+Maximize 5 rupee coins
+Minimize 1 rupee coins
+Rest is 2 rupee coins
+
+Step 2: Algo prepare
+Rs1 - 1_1Rupee
+Rs2 - 2_1Rupee
+Rs3 - 1_1Rupee 1_2Rupee 
+Rs4 - 2_1Rupee 1_2Rupee
+Rs5 - 1_1Rupee 2_2Rupee 
+Rs6 - 2_1Rupee 2_2Rupee
+Rs7 - 1_1Rupee 3_2Rupee
+Rs8 - 2_1Rupee 3_2Rupee
+
+Till the end of 8, every odd number has 1 1Rupee, and every even number has 2 1Rupee
+
+Rs9 - 1_5Rupee 1_2Rupee 2_1Rupee
+Rs10 - 
+
+No of 5 Rupees = Max possible 5 rupees coins in N-4 maximizations of 5
+No of 1 Rupees is 2 if remaining amt after maximization is even
+		  1 if remaining amt after maximization is odd
+Rest is number of 2 Rupees coins
+
+Step 3: Pseudo Code
+input N = total values
+no of 5 Rupee coins = (N-4)/5
+no of 1 Rupee coins
+        if N-5RupeeCoins % 2 == 0 
+                1RupeeCoins = 2
+        else
+                1RupeeCoins = 1
+no of 2 Rupee coins = (N - 5RupeeCoins - 1RupeeCoins)/2 (integer)
+total coins = 1Rupee + 2Rupee + 5Rupee
+print(totalCoins)
+print(5RupeeCoins)
+print(2RupeeCoins)
+print(1RupeeCoins)

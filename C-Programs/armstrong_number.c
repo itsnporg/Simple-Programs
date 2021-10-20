@@ -1,17 +1,19 @@
-#include<stdio.h>
-#include<math.h>
-//Armstrong number means the sum of all digits 
-// e.g for 125=1^3+2^3+5^3=134
-int main(){
-    int num;
-    printf("Enter a number: ");
-    scanf("%d",&num);
-    int sum=0;
-    int n=num;
-    for(int i=0;n>0;i++){
-        int rem=n%10;
-        sum+=rem*rem*rem;
-        n=n/10;
-    }
-    printf("Armstrong number of %d is %d\n",num,sum);
+#include<stdio.h>  
+int main()    
+{    
+int n,r,sum=0,temp;    
+printf("enter the number=");    
+scanf("%d",&n);    
+temp=n;    
+while(n>0)    
+{    
+r=n%10;    
+sum=sum+(r*r*r);    
+n=n/10;    
+}    
+if(temp==sum)    
+printf("armstrong  number ");    
+else    
+printf("not armstrong number");    
+return 0;  
 }

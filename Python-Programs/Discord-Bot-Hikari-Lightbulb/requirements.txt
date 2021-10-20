@@ -1,0 +1,3 @@
+hikari
+hikari-lightbulb
+python_dotenv

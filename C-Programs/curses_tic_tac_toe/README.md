@@ -1,8 +1,11 @@
 # Curses Tic Tac Toe
+
 **Tic Tac Toe game built using ncurses in C**
 
 ## Building
+
 - Requirements
+
   - Clang v9.0.0 or newer
   - Ncurses (See [here for linux installation guide](https://www.osetc.com/en/how-to-install-ncurse-library-in-ubuntu-debian-centos-fedora-linux.html))
 

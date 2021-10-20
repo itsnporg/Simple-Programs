@@ -1,0 +1,5 @@
+Py GOAT,Mahesh Regmi,13,32
+Cybersecurity 101,Nirmal Dahal,29,30
+Get Set Code,Aashish Bhandari,17,20
+Cybersecurity For Dummies,Nikhil Aryal,13,25
+NestJS Basics,Rubin Bhandari,31,20

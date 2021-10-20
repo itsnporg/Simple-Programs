@@ -1,4 +1,4 @@
- //sorting by using bubble short method//
+ //sorting by using bubble sort method//
  #include <stdio.h>
  #include <conio.h>
  int main()

@@ -1,0 +1,53 @@
+.container > h2 {
+  color: #d0d0d0;
+  border-bottom: 1px solid #585858;
+  border-bottom-style: dashed;
+  padding-bottom: 0.6em;
+}
+
+.fun-retype,
+.fun-arg {
+  color: #afd700;
+}
+
+.fun-name {
+  color: #d0d0d0;
+}
+
+.nav-menus {
+  margin-bottom: 2em;
+}
+
+.nav-menus > a {
+  color: #5fafd7;
+  text-decoration: none;
+}
+
+.nav-menus > a + a {
+  margin-left: 0.5em;
+}
+
+.available-rooms-wrapper {
+  margin-top: 1.2em;
+  padding: 1em 0;
+}
+
+.available-rooms-txt {
+  font-size: 1.1em;
+  /*color: #d0d0d0;*/
+  color: #808080;
+  margin-bottom: 0.6em;
+}
+
+.room {
+  padding: 0.5em 0;
+}
+
+.room__link {
+  color: #afd700;
+  padding: 0.1em 0.1em 0.1em 0.1em;
+}
+
+.no-rooms-info {
+  color: crimson;
+}
