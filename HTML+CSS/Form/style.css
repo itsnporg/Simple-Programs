@@ -1,0 +1,58 @@
+body {
+    margin: 0%;
+    background: rgb(229, 231, 231);
+    height: 100vh;
+    padding: 6vw 28vw;
+    padding-top: 0%;
+    color: rgb(14, 11, 11);
+}
+
+#wrapper {
+    position: absolute;
+}
+
+.form {
+    border-radius: 10px;
+    text-align: center;
+    background: rgb(34, 121, 102);
+    width: 30em;
+}
+
+h1,
+h2,
+h4 {
+    text-transform: capitalize;
+}
+
+header h1 {
+    text-align: center;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 80%;
+    margin: 2rem;
+    margin-bottom: 0.8%;
+}
+
+fieldset {
+    border: none;
+    box-shadow: 1px 3px 4px 1px rgb(16, 68, 63)
+}
+
+#btn {
+    margin: 0.8rem;
+    padding: auto;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    box-shadow: 1px 3px 4px 1px rgb(16, 68, 63)
+}
+
+.btn:hover {
+    color: royalblue;
+}
+
+.gender {
+    display: inline;
+}
+
+p {
+    color: rgb(226, 211, 193);
+}

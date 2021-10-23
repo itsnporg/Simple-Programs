@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>a simple form in HTML CSS</h1>
+        </header>
+        <fieldset class="form">
+            <h2>registeration form</h2>
+            <div class="mainForm">
+                <h4>name:<input type="text" name="" id=""></h4>
+                <h4>age: <input type="number"></h4>
+                <h4>gender:
+                    <div class="gender">
+                        <input type="radio" name="select">male<input type="radio" name="select">female
+                    </div>
+                </h4>
+            </div>
+            <h4>address: <input type="text"></h4>
+            <h4>email id: <input type="email"></h4>
+            <h4>phone number: <input type="number"></h4>
+            <input type="submit" id="btn" onclick="thankYou()">
+            <p></p>
+            <p id="showHere"></p>
+        </fieldset>
+    </div>
+
+    </fieldset>
+
+    </div>
+
+</body>
+<script>
+    function thankYou() {
+        document.getElementById("showHere").innerHTML = ("Thank you for your details.Your details have been recorded.")
+    }
+</script>
+
+</html>
