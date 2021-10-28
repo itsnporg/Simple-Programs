@@ -1,0 +1,17 @@
+<%= simple_form_for([@post, @post.comments.build]) do |f| %>
+<!--
+collection.build(attributes = {}, …) Returns one or more new objects of the collection type that have been instantiated with attributes and linked to this object through a foreign key, but have not yet been saved. Note: This only works if an associated object already exists, not if it‘s nil!
+-->
+<div class="field">
+  <div class="control">
+    <%= f.input :name, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+  </div>
+</div>
+
+<div class="field">
+  <div class="control">
+    <%= f.input :body, input_html: { class: 'textarea' }, wrapper: false, label_html: { class: 'label' }  %>
+  </div>
+</div>
+<%= f.button :submit, 'Leave a reply', class: "button is-primary" %>
+<% end %>
